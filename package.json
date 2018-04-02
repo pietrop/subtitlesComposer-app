@@ -1,0 +1,66 @@
+{
+  "name": "subtitles-composer-app",
+  "version": "1.0.1",
+  "description": "An OS X app to generate subtitles captions files from plain text transcriptions and audio or video, media files.",
+  "main": "./src/main.js",
+  "scripts": {
+    "pack:mac": "build --dir --mac --x64",
+    "build:mac": "build --mac --x64",
+    "start": "electron ."
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "Pietro Passarelli",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^1.6.17",
+    "electron-builder": "^19.16.2"
+  },
+  "build": {
+    "appId": "org.otranscribe.otranscribe-electron",
+    "asar": false,
+    "dmg": {
+      "contents": [
+        {
+          "x": 110,
+          "y": 150
+        },
+        {
+          "x": 240,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    },
+    "win": {
+      "target": "squirrel",
+      "icon": "build/icon.ico"
+    }
+  },
+  "dependencies": {
+    "electron-in-page-search": "^1.2.3",
+    "electron-spawn": "^5.0.0",
+    "fix-path": "^2.1.0",
+    "jquery": "^3.2.1",
+    "node-webvtt-youtube": "^1.0.0",
+    "sbd": "^1.0.12",
+    "shell-escape": "^0.2.0",
+    "subtitle_scraper": "^1.2.0",
+    "subtitlescomposer": "git+https://github.com/pietrop/subtitlesComposer.git",
+    "youtube-dl": "^1.11.1",
+    "youtube-video-js": "^1.6.2"
+  }
+}

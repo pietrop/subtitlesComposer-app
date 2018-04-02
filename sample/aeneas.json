@@ -1,0 +1,2357 @@
+{
+"fragments": [
+{
+"begin": "0.000", 
+"children": [], 
+"end": "17.720", 
+"id": "f000001", 
+"language": "eng", 
+"lines": [
+"Yeah there we go just want to", 
+"extend a thanks again to to Pietro"
+]
+}, 
+{
+"begin": "17.720", 
+"children": [], 
+"end": "19.000", 
+"id": "f000002", 
+"language": "eng", 
+"lines": [
+"and Bend."
+]
+}, 
+{
+"begin": "19.000", 
+"children": [], 
+"end": "25.000", 
+"id": "f000003", 
+"language": "eng", 
+"lines": [
+"This is an incredible gathering of", 
+"people and tough acts to follow."
+]
+}, 
+{
+"begin": "25.000", 
+"children": [], 
+"end": "30.680", 
+"id": "f000004", 
+"language": "eng", 
+"lines": [
+"So I'm going to talk about nothing", 
+"so expensive, as as everyone else"
+]
+}, 
+{
+"begin": "30.680", 
+"children": [], 
+"end": "32.600", 
+"id": "f000005", 
+"language": "eng", 
+"lines": [
+"has I've been working."
+]
+}, 
+{
+"begin": "32.600", 
+"children": [], 
+"end": "37.360", 
+"id": "f000006", 
+"language": "eng", 
+"lines": [
+"I mentioned on content management", 
+"systems, mostly text."
+]
+}, 
+{
+"begin": "37.360", 
+"children": [], 
+"end": "41.040", 
+"id": "f000007", 
+"language": "eng", 
+"lines": [
+"I haven't been doing a lot of sort", 
+"of audio and video stuff recently,"
+]
+}, 
+{
+"begin": "41.040", 
+"children": [], 
+"end": "44.960", 
+"id": "f000008", 
+"language": "eng", 
+"lines": [
+"but one of the things that we", 
+"found is as systems have gotten"
+]
+}, 
+{
+"begin": "44.960", 
+"children": [], 
+"end": "51.370", 
+"id": "f000009", 
+"language": "eng", 
+"lines": [
+"more complicated as the things", 
+"that we're trying to do in the web."
+]
+}, 
+{
+"begin": "51.370", 
+"children": [], 
+"end": "56.520", 
+"id": "f000010", 
+"language": "eng", 
+"lines": [
+"Publishing space get more", 
+"complicated, some of the tools"
+]
+}, 
+{
+"begin": "56.520", 
+"children": [], 
+"end": "59.880", 
+"id": "f000011", 
+"language": "eng", 
+"lines": [
+"that we've been relying on for a", 
+"long time are starting to show"
+]
+}, 
+{
+"begin": "59.880", 
+"children": [], 
+"end": "65.840", 
+"id": "f000012", 
+"language": "eng", 
+"lines": [
+"their age, so I wanted to talk", 
+"about killing, markdown and and"
+]
+}, 
+{
+"begin": "65.840", 
+"children": [], 
+"end": "69.080", 
+"id": "f000013", 
+"language": "eng", 
+"lines": [
+"killing markup for that matter."
+]
+}, 
+{
+"begin": "69.080", 
+"children": [], 
+"end": "76.080", 
+"id": "f000014", 
+"language": "eng", 
+"lines": [
+"So, just a little bit of history", 
+"here this who here knows markdown"
+]
+}, 
+{
+"begin": "76.080", 
+"children": [], 
+"end": "77.560", 
+"id": "f000015", 
+"language": "eng", 
+"lines": [
+"so pretty much everyone."
+]
+}, 
+{
+"begin": "77.560", 
+"children": [], 
+"end": "80.280", 
+"id": "f000016", 
+"language": "eng", 
+"lines": [
+"So this looks a lot like markdown", 
+"right."
+]
+}, 
+{
+"begin": "80.280", 
+"children": [], 
+"end": "84.400", 
+"id": "f000017", 
+"language": "eng", 
+"lines": [
+"It'S like you know, he's got a", 
+"header, paragraph ordered list,"
+]
+}, 
+{
+"begin": "84.400", 
+"children": [], 
+"end": "89.560", 
+"id": "f000018", 
+"language": "eng", 
+"lines": [
+"etc. You know it's a little bit", 
+"different from from mark down, but"
+]
+}, 
+{
+"begin": "89.560", 
+"children": [], 
+"end": "92.800", 
+"id": "f000019", 
+"language": "eng", 
+"lines": [
+"it's not marked down it's GML."
+]
+}, 
+{
+"begin": "92.800", 
+"children": [], 
+"end": "97.440", 
+"id": "f000020", 
+"language": "eng", 
+"lines": [
+"It was written in 1969."
+]
+}, 
+{
+"begin": "97.440", 
+"children": [], 
+"end": "103.560", 
+"id": "f000021", 
+"language": "eng", 
+"lines": [
+"Gml was an IBM project to", 
+"essentially write text into into"
+]
+}, 
+{
+"begin": "103.560", 
+"children": [], 
+"end": "108.240", 
+"id": "f000022", 
+"language": "eng", 
+"lines": [
+"files in ways that could be output", 
+"for computers to display and print"
+]
+}, 
+{
+"begin": "108.240", 
+"children": [], 
+"end": "115.360", 
+"id": "f000023", 
+"language": "eng", 
+"lines": [
+"in in better formatted ways, GML", 
+"gave birth to sgml, which was a"
+]
+}, 
+{
+"begin": "115.360", 
+"children": [], 
+"end": "118.760", 
+"id": "f000024", 
+"language": "eng", 
+"lines": [
+"standard, as standardized", 
+"generalized, normally would which"
+]
+}, 
+{
+"begin": "118.760", 
+"children": [], 
+"end": "125.040", 
+"id": "f000025", 
+"language": "eng", 
+"lines": [
+"in turn gave birth to A both HTML", 
+"and XML HTML eventually became"
+]
+}, 
+{
+"begin": "125.040", 
+"children": [], 
+"end": "127.160", 
+"id": "f000026", 
+"language": "eng", 
+"lines": [
+"markdown again."
+]
+}, 
+{
+"begin": "127.160", 
+"children": [], 
+"end": "131.960", 
+"id": "f000027", 
+"language": "eng", 
+"lines": [
+"An XML sort of through a process", 
+"of alien abduction nowadays is"
+]
+}, 
+{
+"begin": "131.960", 
+"children": [], 
+"end": "140.520", 
+"id": "f000028", 
+"language": "eng", 
+"lines": [
+"like JSON kind of, but I think you", 
+"know when we reflect on on this."
+]
+}, 
+{
+"begin": "140.520", 
+"children": [], 
+"end": "145.200", 
+"id": "f000029", 
+"language": "eng", 
+"lines": [
+"Our tools are based on a couple of", 
+"really basic assumptions that"
+]
+}, 
+{
+"begin": "145.200", 
+"children": [], 
+"end": "149.880", 
+"id": "f000030", 
+"language": "eng", 
+"lines": [
+"aren't correct anymore, so you", 
+"know these dis formatting."
+]
+}, 
+{
+"begin": "149.880", 
+"children": [], 
+"end": "155.400", 
+"id": "f000031", 
+"language": "eng", 
+"lines": [
+"This simple formatting was premise", 
+"to only like think about how"
+]
+}, 
+{
+"begin": "155.400", 
+"children": [], 
+"end": "160.480", 
+"id": "f000032", 
+"language": "eng", 
+"lines": [
+"powerful or not computers of 1969", 
+"we're just getting text into a"
+]
+}, 
+{
+"begin": "160.480", 
+"children": [], 
+"end": "167.160", 
+"id": "f000033", 
+"language": "eng", 
+"lines": [
+"file was a hard challenge and and", 
+"then taking that and outputting it"
+]
+}, 
+{
+"begin": "167.160", 
+"children": [], 
+"end": "171.800", 
+"id": "f000034", 
+"language": "eng", 
+"lines": [
+"in formatting it into something", 
+"for a printer was a new problem"
+]
+}, 
+{
+"begin": "171.800", 
+"children": [], 
+"end": "172.480", 
+"id": "f000035", 
+"language": "eng", 
+"lines": [
+"right."
+]
+}, 
+{
+"begin": "172.480", 
+"children": [], 
+"end": "178.800", 
+"id": "f000036", 
+"language": "eng", 
+"lines": [
+"It'S something that no one had", 
+"ever dealt with before so so now"
+]
+}, 
+{
+"begin": "178.800", 
+"children": [], 
+"end": "183.760", 
+"id": "f000037", 
+"language": "eng", 
+"lines": [
+"you know: we've lived through the", 
+"explosion of online publishing and"
+]
+}, 
+{
+"begin": "183.760", 
+"children": [], 
+"end": "187.080", 
+"id": "f000038", 
+"language": "eng", 
+"lines": [
+"and one of the things that that I", 
+"think people in this room"
+]
+}, 
+{
+"begin": "187.080", 
+"children": [], 
+"end": "191.280", 
+"id": "f000039", 
+"language": "eng", 
+"lines": [
+"understands more than anyone else,", 
+"but I think more people are"
+]
+}, 
+{
+"begin": "191.280", 
+"children": [], 
+"end": "195.800", 
+"id": "f000040", 
+"language": "eng", 
+"lines": [
+"beginning To realize this is that", 
+"content is not hierarchical, we"
+]
+}, 
+{
+"begin": "195.800", 
+"children": [], 
+"end": "196.480", 
+"id": "f000041", 
+"language": "eng", 
+"lines": [
+"don't."
+]
+}, 
+{
+"begin": "196.480", 
+"children": [], 
+"end": "200.600", 
+"id": "f000042", 
+"language": "eng", 
+"lines": [
+"We don't have this strict", 
+"hierarchical model of content that"
+]
+}, 
+{
+"begin": "200.600", 
+"children": [], 
+"end": "203.640", 
+"id": "f000043", 
+"language": "eng", 
+"lines": [
+"HTML and XML kind of give us."
+]
+}, 
+{
+"begin": "203.640", 
+"children": [], 
+"end": "208.760", 
+"id": "f000044", 
+"language": "eng", 
+"lines": [
+"So this idea that you know", 
+"everything that we can express, we"
+]
+}, 
+{
+"begin": "208.760", 
+"children": [], 
+"end": "213.280", 
+"id": "f000045", 
+"language": "eng", 
+"lines": [
+"can just do with a series of in", 
+"closing tag, and I think that"
+]
+}, 
+{
+"begin": "213.280", 
+"children": [], 
+"end": "217.840", 
+"id": "f000046", 
+"language": "eng", 
+"lines": [
+"assumptions that we've made that", 
+"we that we proceed with is really"
+]
+}, 
+{
+"begin": "217.840", 
+"children": [], 
+"end": "222.360", 
+"id": "f000047", 
+"language": "eng", 
+"lines": [
+"limiting, and I think overall I", 
+"just I just want to Take a little"
+]
+}, 
+{
+"begin": "222.360", 
+"children": [], 
+"end": "227.320", 
+"id": "f000048", 
+"language": "eng", 
+"lines": [
+"bit of time to for us for this", 
+"room to reflect on it."
+]
+}, 
+{
+"begin": "227.320", 
+"children": [], 
+"end": "233.680", 
+"id": "f000049", 
+"language": "eng", 
+"lines": [
+"You know, HTML has enabled a huge", 
+"amount of amazing things."
+]
+}, 
+{
+"begin": "233.680", 
+"children": [], 
+"end": "241.080", 
+"id": "f000050", 
+"language": "eng", 
+"lines": [
+"It allows us to do everything on", 
+"the web and and that conceptual"
+]
+}, 
+{
+"begin": "241.080", 
+"children": [], 
+"end": "242.640", 
+"id": "f000051", 
+"language": "eng", 
+"lines": [
+"model has gone a long way."
+]
+}, 
+{
+"begin": "242.640", 
+"children": [], 
+"end": "247.600", 
+"id": "f000052", 
+"language": "eng", 
+"lines": [
+"I think a lot of the experiments", 
+"that we're talked about earlier"
+]
+}, 
+{
+"begin": "247.600", 
+"children": [], 
+"end": "252.880", 
+"id": "f000053", 
+"language": "eng", 
+"lines": [
+"are really pushing the boundaries", 
+"of what what we can do with HTML,"
+]
+}, 
+{
+"begin": "252.880", 
+"children": [], 
+"end": "260.560", 
+"id": "f000054", 
+"language": "eng", 
+"lines": [
+"and I think one of the things that", 
+"that this room could could come up"
+]
+}, 
+{
+"begin": "260.560", 
+"children": [], 
+"end": "267.320", 
+"id": "f000055", 
+"language": "eng", 
+"lines": [
+"with is a better mental model for", 
+"how we Think about content and"
+]
+}, 
+{
+"begin": "267.320", 
+"children": [], 
+"end": "271.120", 
+"id": "f000056", 
+"language": "eng", 
+"lines": [
+"because it there's this challenge,", 
+"we can write code."
+]
+}, 
+{
+"begin": "271.120", 
+"children": [], 
+"end": "273.800", 
+"id": "f000057", 
+"language": "eng", 
+"lines": [
+"That does this, but it's not", 
+"reproducible and it doesn't give"
+]
+}, 
+{
+"begin": "273.800", 
+"children": [], 
+"end": "277.040", 
+"id": "f000058", 
+"language": "eng", 
+"lines": [
+"us a generalized mental model for", 
+"thinking about things."
+]
+}, 
+{
+"begin": "277.040", 
+"children": [], 
+"end": "281.120", 
+"id": "f000059", 
+"language": "eng", 
+"lines": [
+"So I'm just going to go through", 
+"some of the the you know, these"
+]
+}, 
+{
+"begin": "281.120", 
+"children": [], 
+"end": "285.120", 
+"id": "f000060", 
+"language": "eng", 
+"lines": [
+"ideas so yeah cool story content", 
+"is hierarchical."
+]
+}, 
+{
+"begin": "285.120", 
+"children": [], 
+"end": "292.520", 
+"id": "f000061", 
+"language": "eng", 
+"lines": [
+"Here'S here's my favorite example", 
+"of non hierarchical content, so"
+]
+}, 
+{
+"begin": "292.520", 
+"children": [], 
+"end": "299.800", 
+"id": "f000062", 
+"language": "eng", 
+"lines": [
+"this is edit on the wasteland mark", 
+"that up in HTML it's a disaster"
+]
+}, 
+{
+"begin": "299.800", 
+"children": [], 
+"end": "300.480", 
+"id": "f000063", 
+"language": "eng", 
+"lines": [
+"right like this."
+]
+}, 
+{
+"begin": "300.480", 
+"children": [], 
+"end": "304.600", 
+"id": "f000064", 
+"language": "eng", 
+"lines": [
+"The content is the printed site."
+]
+}, 
+{
+"begin": "304.600", 
+"children": [], 
+"end": "310.680", 
+"id": "f000065", 
+"language": "eng", 
+"lines": [
+"Everything else is edit for", 
+"Elliott by other other people,"
+]
+}, 
+{
+"begin": "310.680", 
+"children": [], 
+"end": "316.160", 
+"id": "f000066", 
+"language": "eng", 
+"lines": [
+"multiple people and it doesn't fit", 
+"into into this this shape."
+]
+}, 
+{
+"begin": "316.160", 
+"children": [], 
+"end": "320.120", 
+"id": "f000067", 
+"language": "eng", 
+"lines": [
+"So I spent basically last five", 
+"years of my life working on a"
+]
+}, 
+{
+"begin": "320.120", 
+"children": [], 
+"end": "323.400", 
+"id": "f000068", 
+"language": "eng", 
+"lines": [
+"project called Poetica, which was", 
+"an online collaborative editor,"
+]
+}, 
+{
+"begin": "323.400", 
+"children": [], 
+"end": "328.400", 
+"id": "f000069", 
+"language": "eng", 
+"lines": [
+"where we were basically trying to", 
+"enable this on the web, and that"
+]
+}, 
+{
+"begin": "328.400", 
+"children": [], 
+"end": "329.120", 
+"id": "f000070", 
+"language": "eng", 
+"lines": [
+"raised some."
+]
+}, 
+{
+"begin": "329.120", 
+"children": [], 
+"end": "331.960", 
+"id": "f000071", 
+"language": "eng", 
+"lines": [
+"Some really interesting problems", 
+"turns out."
+]
+}, 
+{
+"begin": "331.960", 
+"children": [], 
+"end": "334.720", 
+"id": "f000072", 
+"language": "eng", 
+"lines": [
+"It wasn't a two-week open-source", 
+"hacking."
+]
+}, 
+{
+"begin": "334.720", 
+"children": [], 
+"end": "342.640", 
+"id": "f000073", 
+"language": "eng", 
+"lines": [
+"This is a lot harder than we", 
+"thought and - and I think you know"
+]
+}, 
+{
+"begin": "342.640", 
+"children": [], 
+"end": "348.200", 
+"id": "f000074", 
+"language": "eng", 
+"lines": [
+"we - we have this idea now - that", 
+"for responsive design we can just"
+]
+}, 
+{
+"begin": "348.200", 
+"children": [], 
+"end": "351.640", 
+"id": "f000075", 
+"language": "eng", 
+"lines": [
+"take the content and slow it into", 
+"into whichever container we want,"
+]
+}, 
+{
+"begin": "351.640", 
+"children": [], 
+"end": "355.960", 
+"id": "f000076", 
+"language": "eng", 
+"lines": [
+"but the reality is that content is", 
+"more like a Liquid and some"
+]
+}, 
+{
+"begin": "355.960", 
+"children": [], 
+"end": "359.280", 
+"id": "f000077", 
+"language": "eng", 
+"lines": [
+"liquids are different from others,", 
+"and we need sometimes the"
+]
+}, 
+{
+"begin": "359.280", 
+"children": [], 
+"end": "364.880", 
+"id": "f000078", 
+"language": "eng", 
+"lines": [
+"component parts to be able to", 
+"reason about what we're doing so"
+]
+}, 
+{
+"begin": "364.880", 
+"children": [], 
+"end": "368.960", 
+"id": "f000079", 
+"language": "eng", 
+"lines": [
+"like if you want to so analogy, is", 
+"a little bit stretched, but you"
+]
+}, 
+{
+"begin": "368.960", 
+"children": [], 
+"end": "372.520", 
+"id": "f000080", 
+"language": "eng", 
+"lines": [
+"know like coffee, we take beans,", 
+"we grind them."
+]
+}, 
+{
+"begin": "372.520", 
+"children": [], 
+"end": "376.000", 
+"id": "f000081", 
+"language": "eng", 
+"lines": [
+"We brew the coffee and then we", 
+"pour it into the into the"
+]
+}, 
+{
+"begin": "376.000", 
+"children": [], 
+"end": "377.480", 
+"id": "f000082", 
+"language": "eng", 
+"lines": [
+"container."
+]
+}, 
+{
+"begin": "377.480", 
+"children": [], 
+"end": "380.840", 
+"id": "f000083", 
+"language": "eng", 
+"lines": [
+"You can't just say I can make", 
+"coffee into water by pouring it"
+]
+}, 
+{
+"begin": "380.840", 
+"children": [], 
+"end": "383.440", 
+"id": "f000084", 
+"language": "eng", 
+"lines": [
+"into a different container."
+]
+}, 
+{
+"begin": "383.440", 
+"children": [], 
+"end": "388.120", 
+"id": "f000085", 
+"language": "eng", 
+"lines": [
+"Right, like it is hard metaphor,", 
+"so this is I'm just going to dive"
+]
+}, 
+{
+"begin": "388.120", 
+"children": [], 
+"end": "393.200", 
+"id": "f000086", 
+"language": "eng", 
+"lines": [
+"into how we approach this problem", 
+"really is a way."
+]
+}, 
+{
+"begin": "393.200", 
+"children": [], 
+"end": "399.400", 
+"id": "f000087", 
+"language": "eng", 
+"lines": [
+"I don't have any answers, a", 
+"spoiler alert, but I think just as"
+]
+}, 
+{
+"begin": "399.400", 
+"children": [], 
+"end": "403.600", 
+"id": "f000088", 
+"language": "eng", 
+"lines": [
+"a way to give you guys a framework", 
+"for sort of thinking about how you"
+]
+}, 
+{
+"begin": "403.600", 
+"children": [], 
+"end": "406.680", 
+"id": "f000089", 
+"language": "eng", 
+"lines": [
+"might approach it."
+]
+}, 
+{
+"begin": "406.680", 
+"children": [], 
+"end": "412.440", 
+"id": "f000090", 
+"language": "eng", 
+"lines": [
+"So we essentially took the content", 
+"and - and we got rid of HTML to"
+]
+}, 
+{
+"begin": "412.440", 
+"children": [], 
+"end": "417.560", 
+"id": "f000091", 
+"language": "eng", 
+"lines": [
+"start and we would still use it", 
+"for for like presentation, but"
+]
+}, 
+{
+"begin": "417.560", 
+"children": [], 
+"end": "421.240", 
+"id": "f000092", 
+"language": "eng", 
+"lines": [
+"essentially we move the content", 
+"just to a JSON out there."
+]
+}, 
+{
+"begin": "421.240", 
+"children": [], 
+"end": "425.480", 
+"id": "f000093", 
+"language": "eng", 
+"lines": [
+"And then the key thing here is", 
+"that we moved all of the all of"
+]
+}, 
+{
+"begin": "425.480", 
+"children": [], 
+"end": "429.120", 
+"id": "f000094", 
+"language": "eng", 
+"lines": [
+"the the stuff that you would", 
+"normally put into HTML into"
+]
+}, 
+{
+"begin": "429.120", 
+"children": [], 
+"end": "430.120", 
+"id": "f000095", 
+"language": "eng", 
+"lines": [
+"annotations."
+]
+}, 
+{
+"begin": "430.120", 
+"children": [], 
+"end": "433.400", 
+"id": "f000096", 
+"language": "eng", 
+"lines": [
+"So it's I mean it's very simple,", 
+"similar to what everyone here is"
+]
+}, 
+{
+"begin": "433.400", 
+"children": [], 
+"end": "437.720", 
+"id": "f000097", 
+"language": "eng", 
+"lines": [
+"doing, but if we want an unordered", 
+"list, we just say the unordered"
+]
+}, 
+{
+"begin": "437.720", 
+"children": [], 
+"end": "439.960", 
+"id": "f000098", 
+"language": "eng", 
+"lines": [
+"list starts to provision 29", 
+"coverage."
+]
+}, 
+{
+"begin": "439.960", 
+"children": [], 
+"end": "440.960", 
+"id": "f000099", 
+"language": "eng", 
+"lines": [
+"That text."
+]
+}, 
+{
+"begin": "440.960", 
+"children": [], 
+"end": "446.160", 
+"id": "f000100", 
+"language": "eng", 
+"lines": [
+"We want some bold text, director", 
+"position as being Kevin's aspect,"
+]
+}, 
+{
+"begin": "446.160", 
+"children": [], 
+"end": "447.760", 
+"id": "f000101", 
+"language": "eng", 
+"lines": [
+"because we want to comment."
+]
+}, 
+{
+"begin": "447.760", 
+"children": [], 
+"end": "451.200", 
+"id": "f000102", 
+"language": "eng", 
+"lines": [
+"It starts at position 28 and", 
+"covers that text and here's the"
+]
+}, 
+{
+"begin": "451.200", 
+"children": [], 
+"end": "454.800", 
+"id": "f000103", 
+"language": "eng", 
+"lines": [
+"comments and it's just some", 
+"arbitrary metadata, and so this is"
+]
+}, 
+{
+"begin": "454.800", 
+"children": [], 
+"end": "455.880", 
+"id": "f000104", 
+"language": "eng", 
+"lines": [
+"the rendered output."
+]
+}, 
+{
+"begin": "455.880", 
+"children": [], 
+"end": "460.320", 
+"id": "f000105", 
+"language": "eng", 
+"lines": [
+"But you can see that these things", 
+"all overlap and so to represent"
+]
+}, 
+{
+"begin": "460.320", 
+"children": [], 
+"end": "463.720", 
+"id": "f000106", 
+"language": "eng", 
+"lines": [
+"that in HTML would have been", 
+"basically impossible for us"
+]
+}, 
+{
+"begin": "463.720", 
+"children": [], 
+"end": "464.280", 
+"id": "f000107", 
+"language": "eng", 
+"lines": [
+"approaching it."
+]
+}, 
+{
+"begin": "464.280", 
+"children": [], 
+"end": "469.400", 
+"id": "f000108", 
+"language": "eng", 
+"lines": [
+"This way was central because of", 
+"change control, revision control."
+]
+}, 
+{
+"begin": "469.400", 
+"children": [], 
+"end": "474.800", 
+"id": "f000109", 
+"language": "eng", 
+"lines": [
+"So we wanted to be able to handle", 
+"changes to the underlying content."
+]
+}, 
+{
+"begin": "474.800", 
+"children": [], 
+"end": "481.520", 
+"id": "f000110", 
+"language": "eng", 
+"lines": [
+"It wasn't static, so you know if", 
+"you've ever gotten into a complex,"
+]
+}, 
+{
+"begin": "481.520", 
+"children": [], 
+"end": "483.760", 
+"id": "f000111", 
+"language": "eng", 
+"lines": [
+"get conflict situation."
+]
+}, 
+{
+"begin": "483.760", 
+"children": [], 
+"end": "487.680", 
+"id": "f000112", 
+"language": "eng", 
+"lines": [
+"You'Ll know very intimately what", 
+"Kaylah."
+]
+}, 
+{
+"begin": "487.680", 
+"children": [], 
+"end": "489.360", 
+"id": "f000113", 
+"language": "eng", 
+"lines": [
+"So here's this."
+]
+}, 
+{
+"begin": "489.360", 
+"children": [], 
+"end": "494.880", 
+"id": "f000114", 
+"language": "eng", 
+"lines": [
+"This is just a zoomed in view of", 
+"the json, if i want to add some"
+]
+}, 
+{
+"begin": "494.880", 
+"children": [], 
+"end": "498.480", 
+"id": "f000115", 
+"language": "eng", 
+"lines": [
+"text so that it changes all."
+]
+}, 
+{
+"begin": "498.480", 
+"children": [], 
+"end": "502.320", 
+"id": "f000116", 
+"language": "eng", 
+"lines": [
+"I do here is add some numbers to", 
+"the positions, so it's a really"
+]
+}, 
+{
+"begin": "502.320", 
+"children": [], 
+"end": "503.200", 
+"id": "f000117", 
+"language": "eng", 
+"lines": [
+"simple model."
+]
+}, 
+{
+"begin": "503.200", 
+"children": [], 
+"end": "506.320", 
+"id": "f000118", 
+"language": "eng", 
+"lines": [
+"It gets more complicated, but it", 
+"this would have been impossible in"
+]
+}, 
+{
+"begin": "506.320", 
+"children": [], 
+"end": "508.800", 
+"id": "f000119", 
+"language": "eng", 
+"lines": [
+"1969, like they just didn't."
+]
+}, 
+{
+"begin": "508.800", 
+"children": [], 
+"end": "513.200", 
+"id": "f000120", 
+"language": "eng", 
+"lines": [
+"Have the tools to even consider", 
+"thinking about doing something"
+]
+}, 
+{
+"begin": "513.200", 
+"children": [], 
+"end": "517.520", 
+"id": "f000121", 
+"language": "eng", 
+"lines": [
+"like this in an efficient fast", 
+"way, but now we're doing you know"
+]
+}, 
+{
+"begin": "517.520", 
+"children": [], 
+"end": "520.920", 
+"id": "f000122", 
+"language": "eng", 
+"lines": [
+"the demos earlier are doing", 
+"basically this kind of thing with"
+]
+}, 
+{
+"begin": "520.920", 
+"children": [], 
+"end": "525.160", 
+"id": "f000123", 
+"language": "eng", 
+"lines": [
+"way more complicated structures,", 
+"but i think we haven't quite taken"
+]
+}, 
+{
+"begin": "525.160", 
+"children": [], 
+"end": "530.240", 
+"id": "f000124", 
+"language": "eng", 
+"lines": [
+"a step back to Think about what", 
+"that means in general, so i just"
+]
+}, 
+{
+"begin": "530.240", 
+"children": [], 
+"end": "531.560", 
+"id": "f000125", 
+"language": "eng", 
+"lines": [
+"i'm off this up."
+]
+}, 
+{
+"begin": "531.560", 
+"children": [], 
+"end": "538.240", 
+"id": "f000126", 
+"language": "eng", 
+"lines": [
+"I'M pretty much done, but i'm up", 
+"this up in preparing for this, and"
+]
+}, 
+{
+"begin": "538.240", 
+"children": [], 
+"end": "544.720", 
+"id": "f000127", 
+"language": "eng", 
+"lines": [
+"this is actually taken straight", 
+"out of christmas repo into three"
+]
+}, 
+{
+"begin": "544.720", 
+"children": [], 
+"end": "545.840", 
+"id": "f000128", 
+"language": "eng", 
+"lines": [
+"format."
+]
+}, 
+{
+"begin": "545.840", 
+"children": [], 
+"end": "550.000", 
+"id": "f000129", 
+"language": "eng", 
+"lines": [
+"It a little, but essentially so as", 
+"a thought."
+]
+}, 
+{
+"begin": "550.000", 
+"children": [], 
+"end": "555.480", 
+"id": "f000130", 
+"language": "eng", 
+"lines": [
+"Experiment we have a document,", 
+"this has the transcript and some"
+]
+}, 
+{
+"begin": "555.480", 
+"children": [], 
+"end": "561.880", 
+"id": "f000131", 
+"language": "eng", 
+"lines": [
+"audio and then the annotations not", 
+"sure if this is going easy to"
+]
+}, 
+{
+"begin": "561.880", 
+"children": [], 
+"end": "563.960", 
+"id": "f000132", 
+"language": "eng", 
+"lines": [
+"explain."
+]
+}, 
+{
+"begin": "563.960", 
+"children": [], 
+"end": "568.120", 
+"id": "f000133", 
+"language": "eng", 
+"lines": [
+"But basically so they have a start", 
+"point in the end point and the"
+]
+}, 
+{
+"begin": "568.120", 
+"children": [], 
+"end": "573.080", 
+"id": "f000134", 
+"language": "eng", 
+"lines": [
+"start points against the", 
+"transcript, which is the fact zero."
+]
+}, 
+{
+"begin": "573.080", 
+"children": [], 
+"end": "577.320", 
+"id": "f000135", 
+"language": "eng", 
+"lines": [
+"The games, the audio exists, the", 
+"end point, internship."
+]
+}, 
+{
+"begin": "577.320", 
+"children": [], 
+"end": "581.160", 
+"id": "f000136", 
+"language": "eng", 
+"lines": [
+"It ends with the end of the", 
+"transcription at the end of the"
+]
+}, 
+{
+"begin": "581.160", 
+"children": [], 
+"end": "584.440", 
+"id": "f000137", 
+"language": "eng", 
+"lines": [
+"audio and then for a word that", 
+"just included one we're good here."
+]
+}, 
+{
+"begin": "584.440", 
+"children": [], 
+"end": "591.600", 
+"id": "f000138", 
+"language": "eng", 
+"lines": [
+"Obviously, people simple, but the", 
+"word, starts at position: zero and"
+]
+}, 
+{
+"begin": "591.600", 
+"children": [], 
+"end": "597.400", 
+"id": "f000139", 
+"language": "eng", 
+"lines": [
+"go to Commission to to the wording", 
+"in included that here and then the"
+]
+}, 
+{
+"begin": "597.400", 
+"children": [], 
+"end": "599.040", 
+"id": "f000140", 
+"language": "eng", 
+"lines": [
+"audio is from Europe."
+]
+}, 
+{
+"begin": "599.040", 
+"children": [], 
+"end": "603.160", 
+"id": "f000141", 
+"language": "eng", 
+"lines": [
+"Was there four seconds to 0.28", 
+"seconds now?"
+]
+}, 
+{
+"begin": "603.160", 
+"children": [], 
+"end": "607.160", 
+"id": "f000142", 
+"language": "eng", 
+"lines": [
+"The interesting thing here is that", 
+"if we, if we modify the text like,"
+]
+}, 
+{
+"begin": "607.160", 
+"children": [], 
+"end": "612.200", 
+"id": "f000143", 
+"language": "eng", 
+"lines": [
+"if we add something at the", 
+"beginning of the text, we have a"
+]
+}, 
+{
+"begin": "612.200", 
+"children": [], 
+"end": "617.200", 
+"id": "f000144", 
+"language": "eng", 
+"lines": [
+"really simple way of adjusting the", 
+"annotation without without sort of"
+]
+}, 
+{
+"begin": "617.200", 
+"children": [], 
+"end": "618.760", 
+"id": "f000145", 
+"language": "eng", 
+"lines": [
+"lunging."
+]
+}, 
+{
+"begin": "618.760", 
+"children": [], 
+"end": "621.520", 
+"id": "f000146", 
+"language": "eng", 
+"lines": [
+"Everything and the same thing is", 
+"true of the audio."
+]
+}, 
+{
+"begin": "621.520", 
+"children": [], 
+"end": "624.880", 
+"id": "f000147", 
+"language": "eng", 
+"lines": [
+"So if we make something interested", 
+"into the original audio file, we"
+]
+}, 
+{
+"begin": "624.880", 
+"children": [], 
+"end": "628.600", 
+"id": "f000148", 
+"language": "eng", 
+"lines": [
+"can adjust the offset, so", 
+"everything is sort of independent"
+]
+}, 
+{
+"begin": "628.600", 
+"children": [], 
+"end": "634.200", 
+"id": "f000149", 
+"language": "eng", 
+"lines": [
+"but like axes as the Augmented", 
+"approach to this."
+]
+}, 
+{
+"begin": "634.200", 
+"children": [], 
+"end": "641.440", 
+"id": "f000150", 
+"language": "eng", 
+"lines": [
+"So that's the last that I have,", 
+"but I think you know conceptually"
+]
+}, 
+{
+"begin": "641.440", 
+"children": [], 
+"end": "647.440", 
+"id": "f000151", 
+"language": "eng", 
+"lines": [
+"for forward what we're doing and", 
+"publishing this model gives us the"
+]
+}, 
+{
+"begin": "647.440", 
+"children": [], 
+"end": "652.280", 
+"id": "f000152", 
+"language": "eng", 
+"lines": [
+"ability to really be adaptive in", 
+"what we display."
+]
+}, 
+{
+"begin": "652.280", 
+"children": [], 
+"end": "655.880", 
+"id": "f000153", 
+"language": "eng", 
+"lines": [
+"So a lot of the stuff that I mean", 
+"Chris and down mark we're talking"
+]
+}, 
+{
+"begin": "655.880", 
+"children": [], 
+"end": "659.880", 
+"id": "f000154", 
+"language": "eng", 
+"lines": [
+"about earlier, like a lot of those", 
+"possibilities, become really easy"
+]
+}, 
+{
+"begin": "659.880", 
+"children": [], 
+"end": "663.360", 
+"id": "f000155", 
+"language": "eng", 
+"lines": [
+"to to reason about, because you", 
+"can, you can filter, you, can"
+]
+}, 
+{
+"begin": "663.360", 
+"children": [], 
+"end": "669.960", 
+"id": "f000156", 
+"language": "eng", 
+"lines": [
+"mixing different components and", 
+"and rendering it out to HTML,"
+]
+}, 
+{
+"begin": "669.960", 
+"children": [], 
+"end": "675.760", 
+"id": "f000157", 
+"language": "eng", 
+"lines": [
+"which I'Ve come to think more like", 
+"PDF, then the sort of promise"
+]
+}, 
+{
+"begin": "675.760", 
+"children": [], 
+"end": "677.760", 
+"id": "f000158", 
+"language": "eng", 
+"lines": [
+"semantic Wunderland."
+]
+}, 
+{
+"begin": "677.760", 
+"children": [], 
+"end": "682.840", 
+"id": "f000159", 
+"language": "eng", 
+"lines": [
+"You know, I think I think that", 
+"this model works really well for"
+]
+}, 
+{
+"begin": "682.840", 
+"children": [], 
+"end": "683.480", 
+"id": "f000160", 
+"language": "eng", 
+"lines": [
+"that."
+]
+}, 
+{
+"begin": "683.480", 
+"children": [], 
+"end": "687.720", 
+"id": "f000161", 
+"language": "eng", 
+"lines": [
+"This is just a an example of what", 
+"this could look like."
+]
+}, 
+{
+"begin": "687.720", 
+"children": [], 
+"end": "692.880", 
+"id": "f000162", 
+"language": "eng", 
+"lines": [
+"I think this is something that", 
+"that we need to hash out I'm"
+]
+}, 
+{
+"begin": "692.880", 
+"children": [], 
+"end": "697.280", 
+"id": "f000163", 
+"language": "eng", 
+"lines": [
+"allergic to standards now with", 
+"them too many, so I won't"
+]
+}, 
+{
+"begin": "697.280", 
+"children": [], 
+"end": "702.600", 
+"id": "f000164", 
+"language": "eng", 
+"lines": [
+"apologist Anders, but I just want", 
+"to say like, as the next few days"
+]
+}, 
+{
+"begin": "702.600", 
+"children": [], 
+"end": "708.400", 
+"id": "f000165", 
+"language": "eng", 
+"lines": [
+"are going, I mean keep this in", 
+"mind: try where you Can to extract"
+]
+}, 
+{
+"begin": "708.400", 
+"children": [], 
+"end": "712.560", 
+"id": "f000166", 
+"language": "eng", 
+"lines": [
+"sort of common approaches to", 
+"things, because I think the work"
+]
+}, 
+{
+"begin": "712.560", 
+"children": [], 
+"end": "715.960", 
+"id": "f000167", 
+"language": "eng", 
+"lines": [
+"that's being done here is some of", 
+"the most interesting stuff."
+]
+}, 
+{
+"begin": "715.960", 
+"children": [], 
+"end": "720.840", 
+"id": "f000168", 
+"language": "eng", 
+"lines": [
+"I think on the internet right now", 
+"and will enable so many things to"
+]
+}, 
+{
+"begin": "720.840", 
+"children": [], 
+"end": "725.280", 
+"id": "f000169", 
+"language": "eng", 
+"lines": [
+"happen and if we can get it right", 
+"in in terms of constructing a"
+]
+}, 
+{
+"begin": "725.280", 
+"children": [], 
+"end": "731.440", 
+"id": "f000170", 
+"language": "eng", 
+"lines": [
+"shared mental model, it'll it'll", 
+"extend beyond this room."
+]
+}, 
+{
+"begin": "731.440", 
+"children": [], 
+"end": "734.680", 
+"id": "f000171", 
+"language": "eng", 
+"lines": [
+"To you know the millions of people", 
+"who create stuff for the web now,"
+]
+}, 
+{
+"begin": "734.680", 
+"children": [], 
+"end": "739.440", 
+"id": "f000172", 
+"language": "eng", 
+"lines": [
+"so that's everything I think I'm", 
+"spending in the way of lunch,"
+]
+}, 
+{
+"begin": "739.440", 
+"children": [], 
+"end": "765.880", 
+"id": "f000173", 
+"language": "eng", 
+"lines": [
+"maybe so: ok, yeah [ Applause, ]", 
+"in court or sister character."
+]
+}, 
+{
+"begin": "765.880", 
+"children": [], 
+"end": "782.280", 
+"id": "f000174", 
+"language": "eng", 
+"lines": [
+"Yes, such a suit, yeah yeah,", 
+"exactly yes, yeah yeah."
+]
+}, 
+{
+"begin": "782.280", 
+"children": [], 
+"end": "791.200", 
+"id": "f000175", 
+"language": "eng", 
+"lines": [
+"So I think I think yeah I mean the", 
+"way that we've approached is very"
+]
+}, 
+{
+"begin": "791.200", 
+"children": [], 
+"end": "796.720", 
+"id": "f000176", 
+"language": "eng", 
+"lines": [
+"much character based and around", 
+"Unicode, like the tech stuff has"
+]
+}, 
+{
+"begin": "796.720", 
+"children": [], 
+"end": "797.880", 
+"id": "f000177", 
+"language": "eng", 
+"lines": [
+"been, has been pretty well."
+]
+}, 
+{
+"begin": "797.880", 
+"children": [], 
+"end": "802.360", 
+"id": "f000178", 
+"language": "eng", 
+"lines": [
+"So one of the things that I do", 
+"like above so in thinking about"
+]
+}, 
+{
+"begin": "802.360", 
+"children": [], 
+"end": "806.400", 
+"id": "f000179", 
+"language": "eng", 
+"lines": [
+"this stuff is like it there's a", 
+"bunch of different approaches that"
+]
+}, 
+{
+"begin": "806.400", 
+"children": [], 
+"end": "809.960", 
+"id": "f000180", 
+"language": "eng", 
+"lines": [
+"are quite challenging, but", 
+"recently I should have had the"
+]
+}, 
+{
+"begin": "809.960", 
+"children": [], 
+"end": "813.680", 
+"id": "f000181", 
+"language": "eng", 
+"lines": [
+"realization I mean you guys know", 
+"this already, but if the"
+]
+}, 
+{
+"begin": "813.680", 
+"children": [], 
+"end": "819.240", 
+"id": "f000182", 
+"language": "eng", 
+"lines": [
+"annotation is A game, a video,", 
+"then, is it frames or is it"
+]
+}, 
+{
+"begin": "819.240", 
+"children": [], 
+"end": "823.360", 
+"id": "f000183", 
+"language": "eng", 
+"lines": [
+"seconds, and but you can sort of", 
+"decide that, and as long as you"
+]
+}, 
+{
+"begin": "823.360", 
+"children": [], 
+"end": "828.640", 
+"id": "f000184", 
+"language": "eng", 
+"lines": [
+"agree on where the annotation is", 
+"sort of is positioned against this"
+]
+}, 
+{
+"begin": "828.640", 
+"children": [], 
+"end": "830.760", 
+"id": "f000185", 
+"language": "eng", 
+"lines": [
+"model basically applies to", 
+"anything."
+]
+}, 
+{
+"begin": "830.760", 
+"children": [], 
+"end": "833.040", 
+"id": "f000186", 
+"language": "eng", 
+"lines": [
+"So we're looking at doing really", 
+"complicated."
+]
+}, 
+{
+"begin": "833.040", 
+"children": [], 
+"end": "836.000", 
+"id": "f000187", 
+"language": "eng", 
+"lines": [
+"Like essentially layouts of", 
+"references, archival"
+]
+}, 
+{
+"begin": "836.000", 
+"children": [], 
+"end": "843.360", 
+"id": "f000188", 
+"language": "eng", 
+"lines": [
+"representations of our old", 
+"InDesign layout that we can do in"
+]
+}, 
+{
+"begin": "843.360", 
+"children": [], 
+"end": "850.880", 
+"id": "f000189", 
+"language": "eng", 
+"lines": [
+"this way, because if you can kind", 
+"of encode everything, Thank You"
+]
+}, 
+{
+"begin": "850.880", 
+"children": [], 
+"end": "852.880", 
+"id": "f000190", 
+"language": "eng", 
+"lines": [
+"Paz really quickly."
+]
+}, 
+{
+"begin": "852.880", 
+"children": [], 
+"end": "858.440", 
+"id": "f000191", 
+"language": "eng", 
+"lines": [
+"I love it and also the question is", 
+"nothing in terms of what I was"
+]
+}, 
+{
+"begin": "858.440", 
+"children": [], 
+"end": "860.920", 
+"id": "f000192", 
+"language": "eng", 
+"lines": [
+"subscribed for words."
+]
+}, 
+{
+"begin": "860.920", 
+"children": [], 
+"end": "866.280", 
+"id": "f000193", 
+"language": "eng", 
+"lines": [
+"We would love to basically execute", 
+"someone from polymer content, but"
+]
+}, 
+{
+"begin": "866.280", 
+"children": [], 
+"end": "870.720", 
+"id": "f000194", 
+"language": "eng", 
+"lines": [
+"have lots of resources of the", 
+"damage so sources after there."
+]
+}, 
+{
+"begin": "870.720", 
+"children": [], 
+"end": "874.320", 
+"id": "f000195", 
+"language": "eng", 
+"lines": [
+"I'M also another thing, not happy."
+]
+}, 
+{
+"begin": "874.320", 
+"children": [], 
+"end": "879.360", 
+"id": "f000196", 
+"language": "eng", 
+"lines": [
+"I'M sad - and I wonder, are there", 
+"things like that?"
+]
+}, 
+{
+"begin": "879.360", 
+"children": [], 
+"end": "883.240", 
+"id": "f000197", 
+"language": "eng", 
+"lines": [
+"That was that a conscious decision", 
+"to not include so this is, I don't"
+]
+}, 
+{
+"begin": "883.240", 
+"children": [], 
+"end": "884.080", 
+"id": "f000198", 
+"language": "eng", 
+"lines": [
+"know?"
+]
+}, 
+{
+"begin": "884.080", 
+"children": [], 
+"end": "889.080", 
+"id": "f000199", 
+"language": "eng", 
+"lines": [
+"Yes, yes, so no, so this is", 
+"actually just a massively"
+]
+}, 
+{
+"begin": "889.080", 
+"children": [], 
+"end": "891.560", 
+"id": "f000200", 
+"language": "eng", 
+"lines": [
+"simplified just fit on the tides."
+]
+}, 
+{
+"begin": "891.560", 
+"children": [], 
+"end": "893.920", 
+"id": "f000201", 
+"language": "eng", 
+"lines": [
+"Basically, okay, all of that stuff", 
+"can be included."
+]
+}, 
+{
+"begin": "893.920", 
+"children": [], 
+"end": "896.480", 
+"id": "f000202", 
+"language": "eng", 
+"lines": [
+"One of the nice things about the", 
+"imitation model, which I mean you"
+]
+}, 
+{
+"begin": "896.480", 
+"children": [], 
+"end": "902.400", 
+"id": "f000203", 
+"language": "eng", 
+"lines": [
+"guys know, is that you can mix in", 
+"and out like you can filter and"
+]
+}, 
+{
+"begin": "902.400", 
+"children": [], 
+"end": "905.840", 
+"id": "f000204", 
+"language": "eng", 
+"lines": [
+"add annotations as long as you're", 
+"talking about the same thing."
+]
+}, 
+{
+"begin": "905.840", 
+"children": [], 
+"end": "913.000", 
+"id": "f000205", 
+"language": "eng", 
+"lines": [
+"So if I have you know, commentary", 
+"like a commentary truck there's,"
+]
+}, 
+{
+"begin": "913.000", 
+"children": [], 
+"end": "916.280", 
+"id": "f000206", 
+"language": "eng", 
+"lines": [
+"no reason the commentary track", 
+"shouldn't be aligned to the"
+]
+}, 
+{
+"begin": "916.280", 
+"children": [], 
+"end": "919.200", 
+"id": "f000207", 
+"language": "eng", 
+"lines": [
+"original content or you shouldn't", 
+"need to duplicate the original"
+]
+}, 
+{
+"begin": "919.200", 
+"children": [], 
+"end": "922.520", 
+"id": "f000208", 
+"language": "eng", 
+"lines": [
+"contents in order to add the", 
+"commentary, but you might not want"
+]
+}, 
+{
+"begin": "922.520", 
+"children": [], 
+"end": "926.520", 
+"id": "f000209", 
+"language": "eng", 
+"lines": [
+"to include it in every Dodging and", 
+"so you can just you - can just"
+]
+}, 
+{
+"begin": "926.520", 
+"children": [], 
+"end": "928.840", 
+"id": "f000210", 
+"language": "eng", 
+"lines": [
+"insert into offensive this", 
+"disarray cool."
+]
+}, 
+{
+"begin": "928.840", 
+"children": [], 
+"end": "932.520", 
+"id": "f000211", 
+"language": "eng", 
+"lines": [
+"Thank you very much."
+]
+}, 
+{
+"begin": "932.520", 
+"children": [], 
+"end": "943.160", 
+"id": "f000212", 
+"language": "eng", 
+"lines": [
+"15-Minute break everybody stretch", 
+"I'm going to quick mention before"
+]
+}, 
+{
+"begin": "943.160", 
+"children": [], 
+"end": "944.880", 
+"id": "f000213", 
+"language": "eng", 
+"lines": [
+"lunch."
+]
+}, 
+{
+"begin": "944.880", 
+"children": [], 
+"end": "947.160", 
+"id": "f000214", 
+"language": "eng", 
+"lines": [
+"It was up to you."
+]
+}, 
+{
+"begin": "947.160", 
+"children": [], 
+"end": "949.440", 
+"id": "f000215", 
+"language": "eng", 
+"lines": [
+"Stretch."
+]
+}, 
+{
+"begin": "949.440", 
+"children": [], 
+"end": "954.030", 
+"id": "f000216", 
+"language": "eng", 
+"lines": [
+"Bathrooms on hall must be any", 
+"questions."
+]
+}, 
+{
+"begin": "954.030", 
+"children": [], 
+"end": "961.920", 
+"id": "f000217", 
+"language": "eng", 
+"lines": [
+"Feedback at new so should identify", 
+"the yeah nine people run out of"
+]
+}, 
+{
+"begin": "961.920", 
+"children": [], 
+"end": "964.280", 
+"id": "f000218", 
+"language": "eng", 
+"lines": [
+"battery"
+]
+}
+]
+}

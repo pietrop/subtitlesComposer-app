@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Subtitle Composer App</title>
+      <!-- Latest compiled and minified CSS -->
+      <!-- TODO: move to local folder -->
+      <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/paper/bootstrap.min.css" > -->
+      <!-- <link rel="stylesheet" media="screen" href="node_modules/bootstrap/dist/css/bootstrap.css"> -->
+      <link rel="stylesheet" type="text/css" href="css/bootswatch.css" rel="stylesheet" media="screen">
+
+      <!-- Latest compiled and minified JavaScript -->
+  </head>
+  <body>
+
+<br>
+
+<div class="container-fluid" >
+  <div class="row">
+    <div class="col-xs-12 col-sm-5  col-md-5  col-lg-5">
+        <!-- <label >Select audio/video file</label> -->
+       <a  id="selectFileBtn" class="btn btn-primary btn-sm">Select Video or Audio file </a>
+        <a id="reset" class="btn btn-default btn-sm" href="#">X</a>
+        <br>
+        <code id="displayInputFileName"></code>
+    </div>
+    <div class="col-xs-12 col-sm-5  col-md-5  col-lg-5">
+      
+       <div class="form-group">
+        <a id="selectTextFileBtn" class="btn btn-primary btn-sm" href="#">Select text file <code>.txt</code></a>
+        <label >Or copy and paste text content here, with or without punctuation.</label>
+       </div>
+
+
+      <!-- Add buttons to create srt and save -->
+    </div>
+    <div class="col-xs-12 col-sm-2  col-md-2  col-lg-2">
+      <div class="form-group">
+       <a id="installAeneas" class="btn btn-default btn-xs" href="https://github.com/sillsdev/aeneas-installer/releases" target="_blank">Install Aneneas aligner</a>
+        <!-- <label >You need to have Aeneas installed on your computer for this app to work.</label> -->
+      </div>
+    </div>
+    <br>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-5  col-md-5  col-lg-5">
+          <div id="videoPreview" class="embed-responsive embed-responsive-16by9">
+          </div>
+        <br><br>
+
+        <div class="noticeBox"></div>
+        
+    </div>
+ 
+    <div class="col-xs-12 col-sm-5  col-md-5  col-lg-5">
+      <!-- <label for="select" class="control-label">Text</label> -->
+      <div id="textBox"  class="form-control"  contenteditable="true">
+
+      </div>
+    </div>
+
+
+    <div class="col-xs-12 col-sm-2  col-md-2  col-lg-2">
+
+      
+
+      <!-- Info -->
+      <div class="checkbox">
+        <label>
+          <input id="checkboxInput" type="checkbox" > <small>Pause video while typing </small>
+        </label>
+      </div>
+
+      <label  class="control-label">Characters per line</label>
+      <input type="text" class="form-control" id="charPerLineInput" placeholder="head tail" value="35">
+      <label  class="control-label"><small>Number of characters, including spaces, that you would like to see on screen on each line in the subtitle file.</small></label>
+
+
+      <label  class="control-label">Number of lines per screen</label>
+      <input type="text" class="form-control" id="linesPerScreen" placeholder="head tail" value="2" disabled>
+
+
+       <label  class="control-label">Head Tail</label>
+       <input type="text" class="form-control" id="inputHeadTail" placeholder="head tail" value="00:00:00,000">
+       <label><small>ignore this many seconds at begin of audio</small></label>
+       <label class=" control-label">End Tail</label>
+       <input type="text" class="form-control" id="inputEndTail" placeholder="End tail" value="00:00:00,000">
+       <label><small>ignore this many seconds at end of audio</small></label>
+       <!-- <a id="searchBtn" class="btn btn-default btn-xs" href="#">search</a> -->
+
+<div class="form-group">
+  <!-- Espeek languages http://espeak.sourceforge.net/languages.html -->
+      <label for="select" class=" control-label">Languages for alignement</label>
+        <select class="form-control" id="selectLanguageForAlignement">
+          <option value="eng">English</option>
+          <option value="it">Italian</option>
+          <option value="af">  Afrikaans </option>
+          <option value="bs">  Bosnian </option>
+          <option value="ca">  Catalan </option>
+          <option value="cs">  Czech </option>
+          <option value="da">  Danish </option>
+          <option value="de">  German </option>
+          <option value="el">  Greek </option>
+          <option value="eo">  Esperanto </option>
+          <option value="es">  Spanish </option>
+          <option value="es-la">  Spanish - Latin America </option>
+          <option value="fi">  Finnish </option>
+          <option value="fr">  French </option>
+          <option value="hr">  Croatian </option>
+          <option value="hu">  Hungarian </option>
+          <option value="lv">  Latvian </option>
+          <option value="nl">  Dutch </option>
+          <option value="pl">  Polish </option>
+          <option value="pt">  Portuguese (Brazil) </option>
+          <option value="pt-pt">  Portuguese (European) </option>
+          <option value="ro">  Romanian </option>
+          <option value="sk">  Slovak </option>
+          <option value="sr">  Serbian </option>
+          <option value="sv">  Swedish </option>
+          <option value="sw">  Swahihi </option>
+          <option value="ta">  Tamil </option>
+          <option value="tr">  Turkish </option>
+          <option value="zh">  Mandarin Chinese </option>
+        </select>
+    </div>
+
+    <!-- Aneneas supported formats https://www.readbeyond.it/aeneas/ -->
+    <div class="form-group">
+      <label for="select" class=" control-label">Subtitles captions  file format</label>
+        <select class="form-control" id="selectCaptionFormat">
+          <option value="srt">SRT</option>
+          <option value="sbv">SBV</option>
+          <option value="ttml">TTML</option>
+          <option value="vtt">VTT</option>
+          <option value="json">JSON</option>
+          <option value="aud">AUD</option>
+          <option value="csv">CSV</option>
+          <option value="ssv">SSV</option>
+          <option value="tsv">TSV</option>
+          <option value="txt">TXT</option>
+          <option value="xml">XML</option>
+        </select>
+    </div>
+
+      <hr>
+
+       <button id="createSubtitles" class="btn btn-warning btn-sm" href="#">Create Subtitle</button>
+
+
+    </div>
+  </div>
+  </div>
+
+  <style>
+  #textBox{
+    width: 100%;
+    height: 85vh;
+    overflow: scroll;
+    background: #fff;
+    box-shadow: 0 0 10px #ccc;
+    padding: 50px;
+  }
+  body{
+        background: #f1f1f1;
+  }
+
+   #videoYoutubeUrlInput {width:250px !important;}
+
+   #progressLineEditor {
+      background: grey;
+      height: 85vh;
+      width: 10px;
+  }
+
+  </style>
+
+  <script>window.$ = window.jQuery = require('../node_modules/jquery/dist/jquery.js');</script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+  <!-- ./node_modules/bootstrap/dist/js/bootstrap.min.js -->
+  <script>
+  require('./renderer.js');
+  </script>
+  </body>
+</html>

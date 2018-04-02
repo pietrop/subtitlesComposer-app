@@ -1,0 +1,53 @@
+# .gitignore, files to ignore when pushing to github 
+
+dist/
+
+tmp/*.txt
+tmp/*.srt
+
+# app.js in electron folder is generated with browserify using the npm comands.
+electron/app.js
+
+#ignore all video files
+*.wmv
+*.mpg
+*.mpeg
+*.mp4
+*.mov
+*.flv
+*.avi
+*.ogv
+*.ogg
+*.webm
+
+#ignore audio file
+*.wav
+*.mp3
+
+#ingore subtitles files
+*.srt
+*.sbv
+
+
+# Logs
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+
+# app ready for distribution 
+dist
+
+# Dependency directory
+# https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
+node_modules
+
+
+.idea
+Notes
+
+package-lock.json
