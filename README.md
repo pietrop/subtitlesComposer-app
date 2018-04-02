@@ -1,13 +1,14 @@
-# Captioning App 
+# `subtitleComposer` App
 
-Inspired by [oTranscribe](http://otranscribe.com) and on the back of [textAV](http://textAV.tech) event unconference group. Electron, osx desktop app, see [release section](https://github.com/pietrop/captioning-app/releases/tag/1.0.0) for os x `dmg` packaged version.
-
+A simple os x desktop app built in electron, using [Aeneas][aeneas] under the hood to generate captions files from media(audio and video) and plain text transcriptions without time-codes.
 
 ##  Usage
 
 Go to release section and download latest version. 
 
 See user manual for more details. 
+
+![Video + text screenshot](screenshots/video+text.png)
 
 ## Dev setup 
 
@@ -17,7 +18,7 @@ git clone, cd into folder, `npm install`, `npm start`.
 
 The app uses electron, bootstrap with bootswatch paper theme, and purpously does not make use of any front end framework to keep things simple a this stage, where the UI/UX and functionality are being defined.
 
-For the alignement it uses the Aeneas open source project, see user manual for more details on how to get setup with that locally.
+For the alignement it uses the [Aeneas][aeneas] open source project, see user manual for more details on how to get setup with that locally.
 
 
 ### UI to correct captions alignement 
@@ -30,6 +31,9 @@ At present the tool does not provide a user interface to correc the alignement o
 - [ ] escape odd chat in file name, and spaces, for unix (`?`) eg
 	- https://www.npmjs.com/package/string-escape
 	- or https://www.npmjs.com/package/sanitize-filename
+
+- [ ] Revisit underlying `subtitlescomposer` module to support custom list of `HOMORIFICS`.
+	- [ ] provide UI to give / add/edit list.
 
 
 ## Roadmap
@@ -49,3 +53,4 @@ feel free to get in touch if you have any issues, thoughts, questions, or ideas.
 <!-- Initial requirements gathering and specification while at textAV with Joseph Polizzotto, Gideo, Marshal, and Jane -->
 
 
+[aeneas]: https://github.com/readbeyond/aeneas
