@@ -4,9 +4,9 @@ A simple os x desktop app built in electron, using [Aeneas][aeneas] under the ho
 
 ##  Usage
 
-1. [Go to release section and download, packaged, ready to use version](https://github.com/pietrop/subtitlesComposer-app/releases). 
+1. [Go to release section and download, packaged version, ready to use version](https://github.com/pietrop/subtitlesComposer-app/releases). 
 
-2. --> [See user manual for more details](https://www.gitbook.com/book/pietropassarelli/subtitlecomposer-app/) <--=
+2. --> [See user manual for more details](https://www.gitbook.com/book/pietropassarelli/subtitlecomposer-app/) <--
 
 ![Video + text screenshot](screenshots/video+text+.png)
 
