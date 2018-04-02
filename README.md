@@ -1,14 +1,14 @@
 # `subtitleComposer` App
 
-A simple os x desktop app built in electron, using [Aeneas][aeneas] under the hood to generate captions files from media(audio and video) and plain text transcriptions without time-codes.
+A simple os x desktop app built in electron, using [Aeneas][aeneas] under the hood to generate captions files from media(audio or video) and plain text transcriptions without time-codes.
 
 ##  Usage
 
-Go to release section and download latest version. 
+1. [Go to release section and download, packaged, ready to use version](https://github.com/pietrop/subtitlesComposer-app/releases). 
 
-See user manual for more details. 
+2. --> [See user manual for more details](https://www.gitbook.com/book/pietropassarelli/subtitlecomposer-app/) <--=
 
-![Video + text screenshot](screenshots/video+text.png)
+![Video + text screenshot](screenshots/video+text+.png)
 
 ## Dev setup 
 
@@ -26,8 +26,8 @@ At present the tool does not provide a user interface to correc the alignement o
 
 ## Todo 
 
-- [ ] Char per line option, add to UI.
-- [ ] Add head and end tail to aeneas comand from UI.
+- [X] Char per line option, add to UI.
+- [X] Add head and end tail to aeneas comand from UI.
 - [ ] escape odd chat in file name, and spaces, for unix (`?`) eg
 	- https://www.npmjs.com/package/string-escape
 	- or https://www.npmjs.com/package/sanitize-filename
@@ -41,7 +41,7 @@ At present the tool does not provide a user interface to correc the alignement o
 TBC
 
 ## Issues
-feel free to get in touch if you have any issues, thoughts, questions, or ideas.
+Feel free to get in touch if you have any issues, thoughts, questions, or ideas.
 
 ## Active Contributors 
 
