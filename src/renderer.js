@@ -14,6 +14,8 @@ const electron = require('electron');
 const {shell} = require('electron')
 const {dialog} = require('electron').remote;
 
+
+
 const ffmpegFormats = require('./lib/ffmpeg_formats/index.js');
 
 const convertTimeCodeToSeconds = require('./lib/convert_timecode_to_seconds');
@@ -141,7 +143,7 @@ createSubtitlesEl.onclick = function(){
 	populateNoticeBox("");
 	//assumes allignment has been run, perhaps add a boolean flag to check that it is the case. 
 
-	var tmpInputBaseFileName =  path.basename(sourceVideoPath);
+	var tmpInputBaseFileName =  path.basename(sourceVideoPath.replace(/(\s+)/g, '\\$1'));
 	var tmpOutputFileName = tmpInputBaseFileName+"."+getCaptionsFileFormat();
 	// var  subtitlesComposer = require('../node_modules/subtitlescomposer');
 	var tmpOutputFilePath =  path.join(desktopPath, tmpOutputFileName);
@@ -167,12 +169,20 @@ createSubtitlesEl.onclick = function(){
 		}, 
 		function(filePath){
 			console.log('filePath', filePath);
-			var result = fs.readFileSync(filePath).toString();
-			successMessage(desktopPath,tmpOutputFileName, getCaptionsFileFormat());
+
+			var tmpInputBaseFileNameEnd =  path.basename(sourceVideoPath);
+			var tmpOutputFileNameEnd 	= tmpInputBaseFileNameEnd+"."+getCaptionsFileFormat();
+			var tmpOutputFilePathEnd 	=  path.join(desktopPath, tmpOutputFileNameEnd);
+			var result = fs.readFileSync(tmpOutputFilePathEnd).toString();
+			console.log(result);
+
+
+			successMessage(desktopPath+"/",tmpOutputFileNameEnd, getCaptionsFileFormat());
 			// shell.openItem(desktopPath);
 			// shell.openItem(filePath);
 			disableCreateSubtitlesBtn(false);
-			console.log(result);
+			
+
 			
 	});
 

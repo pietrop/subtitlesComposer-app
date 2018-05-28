@@ -1,6 +1,6 @@
 {
   "name": "subtitles-composer-app",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "An OS X app to generate subtitles captions files from plain text transcriptions and audio or video, media files.",
   "main": "./src/main.js",
   "scripts": {
@@ -40,9 +40,11 @@
       ]
     },
     "linux": {
+     "category": "",
+      "packageCategory": "GNOME;GTK;captions;subtitles",
+      "description": "subtitlescomposer Desktop Client for Linux",
       "target": [
-        "AppImage",
-        "deb"
+        "AppImage"
       ]
     },
     "win": {
@@ -55,12 +57,9 @@
     "electron-spawn": "^5.0.0",
     "fix-path": "^2.1.0",
     "jquery": "^3.2.1",
-    "node-webvtt-youtube": "^1.0.0",
     "sbd": "^1.0.12",
     "shell-escape": "^0.2.0",
     "subtitle_scraper": "^1.2.0",
-    "subtitlescomposer": "git+https://github.com/pietrop/subtitlesComposer.git",
-    "youtube-dl": "^1.11.1",
-    "youtube-video-js": "^1.6.2"
+    "subtitlescomposer": "git+https://github.com/pietrop/subtitlesComposer.git"
   }
 }

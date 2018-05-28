@@ -6,13 +6,23 @@ A simple os x desktop app built in electron, using [Aeneas][aeneas] under the ho
 
 1. [Go to release section and download, packaged version, ready to use version](https://github.com/pietrop/subtitlesComposer-app/releases). 
 
-2. --> [See user manual for more details](https://www.gitbook.com/book/pietropassarelli/subtitlecomposer-app/) <--
+2. --> [See user manual for more details](https://pietropassarelli.gitbooks.io/subtitlecomposer-app/content/) <--
 
 ![Video + text screenshot](screenshots/video+text+.png)
 
 ## Dev setup 
 
 git clone, cd into folder, `npm install`, `npm start`.
+
+## Build
+
+After having done step fo dev setup, do 
+
+```
+npm run build:mac
+```
+
+To package dmg for mac, when done, check the [`./dist`](`./dist`) folder in the repo. 
 
 ## Stack 
 
@@ -32,8 +42,12 @@ At present the tool does not provide a user interface to correc the alignement o
 	- https://www.npmjs.com/package/string-escape
 	- or https://www.npmjs.com/package/sanitize-filename
 
+
+### Nice to have (`?`)
 - [ ] Revisit underlying `subtitlescomposer` module to support custom list of `HOMORIFICS`.
 	- [ ] provide UI to give / add/edit list.
+
+- [ ] Hypertranscript for text portion of text transcriptin (`?`)
 
 
 ## Roadmap
