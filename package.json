@@ -6,6 +6,7 @@
   "scripts": {
     "pack:mac": "build --dir --mac --x64",
     "build:mac": "build --mac --x64",
+    "build:linux": "build --linux  --x64",
     "start": "electron ."
   },
   "repository": "https://github.com/electron/electron-quick-start",
@@ -40,7 +41,7 @@
       ]
     },
     "linux": {
-     "category": "",
+      "category": "",
       "packageCategory": "GNOME;GTK;captions;subtitles",
       "description": "subtitlescomposer Desktop Client for Linux",
       "target": [

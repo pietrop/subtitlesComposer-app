@@ -50,4 +50,4 @@ node_modules
 .idea
 Notes
 
-package-lock.json
+.DS_Store
