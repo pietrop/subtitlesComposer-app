@@ -1,4 +1,4 @@
-# `subtitleComposer` App
+# `subtitleComposer` App 
 
 A simple os x desktop app built in electron, using [Aeneas][aeneas] under the hood to generate captions files from media(audio or video) and plain text transcriptions without time-codes.
 
