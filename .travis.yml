@@ -42,9 +42,9 @@ script:
   # - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; find . | grep AppImage ; fi
   # - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; bash upload.sh ./dist/subtitles-composer-app-*-x86_64.AppImage ; fi
 
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; npm run build:mac; fi
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; find . | grep dmg ; fi
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; bash upload.sh ./dist/subtitles-composer-app-*.dmg ; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then npm run build:mac ; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then find . | grep dmg ; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then bash upload.sh ./dist/subtitles-composer-app-*.dmg ; fi
 
 branches:
   except:
