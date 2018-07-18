@@ -60,7 +60,7 @@ var timeout = null;
 var resumeTiypingTimeInterval = 600;
 var startStopPlayingVideoOntyping = false;
 var sourceVideoPath ="";
-
+var optionalPathToAeneasBinary = "";
 
 resetEl.onclick=function(e){
 	var confirmation = confirm("This action will reset the app, removing video and text form the app, are you sure you want to continue?");
@@ -164,8 +164,8 @@ createSubtitlesEl.onclick = function(){
 		//ignore this many seconds at begin of audio
 		audio_file_head_length : getInputHeadTail(),
 		captionFileFormat : getCaptionsFileFormat(),
-		language: getLanguageForAlignement()
-
+		language: getLanguageForAlignement(),
+		optionalPathToAeneasBinary: getOptionalPathToAeneasBinary()
 		}, 
 		function(filePath){
 			console.log('filePath', filePath);
@@ -314,9 +314,32 @@ function setAeneasSetupInstructions() {
 	// 	populateAeneasSetupDivEl(`aeneasSetupInstructionsHTMLosx`)
 	// }
 	// else if(process.platform ==='linux'){
-		populateAeneasSetupDivEl('on linux')
+	
+
+		dialog.showOpenDialog(
+			{
+			  properties: ['openFile'],
+			  filters: [
+			//   { name: 'All Files', extensions: ['srt']}
+			  ]
+			},
+		   function(fileName){
+				setOptionalPathToAeneasBinary(fileName);
+				populateAeneasSetupDivEl(`<div>Path to Linux Aeneas <code>appImage</code>: <code id="displayAppImageFileName">${fileName}</code></div>`);
+		  });
+
+		
 	// }
 };
+
+function getOptionalPathToAeneasBinary(){
+	return optionalPathToAeneasBinary
+}
+
+function setOptionalPathToAeneasBinary(aeneasBinNewPath){
+	 optionalPathToAeneasBinary = aeneasBinNewPath;
+}
+
 
 
 function populateAeneasSetupDivEl(html){
