@@ -2,13 +2,9 @@ language: node_js
 node_js:
   - "7"
 
-matrix:
-  include:
-    - os: linux
-      dist: trusty
-      sudo: required
-    - os: osx
-      osx_image: xcode7.2
+os: linux
+dist: trusty
+sudo: required
 
 cache:
   directories:
@@ -30,15 +26,11 @@ install:
 
 script:
 #  - npm run test
-- npm run build
+# - npm run build
+  - npm run build:linux
+  - find . | grep AppImage
   - wget -c https://github.com/probonopd/uploadtool/raw/master/upload.sh
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; npm run build:linux ; fi
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; find . | grep AppImage ; fi
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; bash upload.sh ./dist/subtitles-composer-app-*-x86_64.AppImage ; fi
-
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then npm run build:mac ; fi
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then find . | grep dmg ; fi
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then bash upload.sh ./dist/subtitles-composer-app-*.dmg  ; fi
+  - bash upload.sh ./dist/subtitles-composer-app-*-x86_64.AppImage
 
 branches:
   except:

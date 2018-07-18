@@ -314,23 +314,29 @@ function setAeneasSetupInstructions() {
 	// 	populateAeneasSetupDivEl(`aeneasSetupInstructionsHTMLosx`)
 	// }
 	// else if(process.platform ==='linux'){
-	
-
-		dialog.showOpenDialog(
-			{
-			  properties: ['openFile'],
-			  filters: [
-			//   { name: 'All Files', extensions: ['srt']}
-			  ]
-			},
-		   function(fileName){
-				setOptionalPathToAeneasBinary(fileName);
-				populateAeneasSetupDivEl(`<div>Path to Linux Aeneas <code>appImage</code>: <code id="displayAppImageFileName">${fileName}</code></div>`);
-		  });
-
-		
+		// var linuxAeneasPathPrompt =`<div onclick="showOpenDialogueToSetAeneasPath()">Set aeneaspath</div>`
+		var linuxAeneasPathPrompt = `Linux aeneas`
+		populateAeneasSetupDivEl(linuxAeneasPathPrompt)
+		// }
 	// }
 };
+
+
+function showOpenDialogueToSetAeneasPath(cb){
+	dialog.showOpenDialog(
+		{
+		  properties: ['openFile'],
+		  filters: [
+		//   { name: 'All Files', extensions: ['srt']}
+		  ]
+		},
+	   function(fileName){
+		  
+		setOptionalPathToAeneasBinary(fileName);
+		populateAeneasSetupDivEl(`<div>Path to Linux Aeneas <code>appImage</code>: <code id="displayAppImageFileName">${fileName}</code></div>`);
+			
+	  });
+}
 
 function getOptionalPathToAeneasBinary(){
 	return optionalPathToAeneasBinary
