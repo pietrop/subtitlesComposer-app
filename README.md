@@ -6,6 +6,9 @@ A simple os x desktop app built in electron, using [Aeneas][aeneas] under the ho
 
 1. [Go to release section and download, packaged version, ready to use version](https://github.com/pietrop/subtitlesComposer-app/releases). 
 
+
+Linux users can download a [continuos build here](https://github.com/pietrop/subtitlesComposer-app/releases/tag/continuous)
+
 2. --> [See user manual for more details](https://pietropassarelli.gitbooks.io/subtitlecomposer-app/content/) <--
 
 ![Video + text screenshot](screenshots/video+text+.png)
@@ -23,6 +26,8 @@ npm run build:mac
 ```
 
 To package dmg for mac, when done, check the [`./dist`](`./dist`) folder in the repo. 
+
+There's also a travis CI continuos integration build that is triggered on very commit for the Linux version, [some notes on this setup here](http://pietropassarelli.com/electron-github-travis-ci.html)
 
 ## Stack 
 
