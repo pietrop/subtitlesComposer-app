@@ -24,7 +24,7 @@
     "electron-builder": "^19.16.2"
   },
   "build": {
-    "appId": "org.otranscribe.otranscribe-electron",
+    "appId": "org.subtitlesComposer.subtitlesComposer-electron",
     "asar": false,
     "dmg": {
       "contents": [
@@ -41,7 +41,7 @@
       ]
     },
     "linux": {
-      "category": "",
+      "category": "Video",
       "packageCategory": "GNOME;GTK;captions;subtitles",
       "description": "subtitlescomposer Desktop Client for Linux",
       "target": [
