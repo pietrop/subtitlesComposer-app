@@ -6,7 +6,7 @@ A simple os x desktop app built in electron, using [Aeneas][aeneas] under the ho
 
 1. [Go to release section and download, packaged version, ready to use version](https://github.com/pietrop/subtitlesComposer-app/releases). 
 
-
+ 
 Linux users can download a [continuos build here](https://github.com/pietrop/subtitlesComposer-app/releases/tag/continuous)
 
 2. --> [See user manual for more details](https://pietropassarelli.gitbooks.io/subtitlecomposer-app/content/) <--
