@@ -17,9 +17,7 @@ const {dialog} = require('electron').remote;
 
 
 const ffmpegFormats = require('./lib/ffmpeg_formats/index.js');
-
 const convertTimeCodeToSeconds = require('./lib/convert_timecode_to_seconds');
-
 
 var  subtitlescomposer = require('subtitlescomposer');
 
@@ -55,6 +53,8 @@ var selectLanguageForAlignementEl = document.getElementById('selectLanguageForAl
 var noticeBoxEl = document.querySelector('.noticeBox');
 
 var resetEl = document.querySelector('#reset');
+
+var aeneasSetupDivEl = document.querySelector('#aeneasSetupDiv');
 
 var timeout = null;
 var resumeTiypingTimeInterval = 600;
@@ -304,4 +304,21 @@ function playVideo(){
 function pauseVideo(){
 	var video = document.querySelector('video');
 	video.pause();
+}
+
+setAeneasSetupInstructions();
+
+function setAeneasSetupInstructions() {
+	// vae aeneasSetupInstructionsHTMLosx = `<a id="installAeneas" class="btn btn-default btn-xs" href="https://github.com/sillsdev/aeneas-installer/releases" target="_blank">Install Aeneas aligner</a>`;
+	// if(process.platform ==='darwin'){
+	// 	populateAeneasSetupDivEl(`aeneasSetupInstructionsHTMLosx`)
+	// }
+	// else if(process.platform ==='linux'){
+		populateAeneasSetupDivEl('on linux')
+	// }
+};
+
+
+function populateAeneasSetupDivEl(html){
+	aeneasSetupDivEl.innerHTML=html;
 }

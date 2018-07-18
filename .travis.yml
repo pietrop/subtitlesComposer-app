@@ -37,7 +37,7 @@ install:
 script:
 #  - npm run test
 # - npm run build
-  # - wget -c https://github.com/probonopd/uploadtool/raw/master/upload.sh
+  - wget -c https://github.com/probonopd/uploadtool/raw/master/upload.sh
   # - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; npm run build:linux ; fi
   # - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; find . | grep AppImage ; fi
   # - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; bash upload.sh ./dist/subtitles-composer-app-*-x86_64.AppImage ; fi
