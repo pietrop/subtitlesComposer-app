@@ -60,7 +60,9 @@ var timeout = null;
 var resumeTiypingTimeInterval = 600;
 var startStopPlayingVideoOntyping = false;
 var sourceVideoPath ="";
-var optionalPathToAeneasBinary = "";
+global.optionalPathToAeneasBinary = "";
+
+setAeneasSetupInstructions();
 
 resetEl.onclick=function(e){
 	var confirmation = confirm("This action will reset the app, removing video and text form the app, are you sure you want to continue?");
@@ -306,45 +308,39 @@ function pauseVideo(){
 	video.pause();
 }
 
-setAeneasSetupInstructions();
+
 
 function setAeneasSetupInstructions() {
-	// vae aeneasSetupInstructionsHTMLosx = `<a id="installAeneas" class="btn btn-default btn-xs" href="https://github.com/sillsdev/aeneas-installer/releases" target="_blank">Install Aeneas aligner</a>`;
-	// if(process.platform ==='darwin'){
-	// 	populateAeneasSetupDivEl(`aeneasSetupInstructionsHTMLosx`)
-	// }
-	// else if(process.platform ==='linux'){
-		// var linuxAeneasPathPrompt =`<div onclick="showOpenDialogueToSetAeneasPath()">Set aeneaspath</div>`
-		var linuxAeneasPathPrompt = `Linux aeneas`
-		populateAeneasSetupDivEl(linuxAeneasPathPrompt)
-		// }
-	// }
-};
-
-
-function showOpenDialogueToSetAeneasPath(cb){
-	dialog.showOpenDialog(
-		{
-		  properties: ['openFile'],
-		  filters: [
-		//   { name: 'All Files', extensions: ['srt']}
-		  ]
-		},
-	   function(fileName){
-		  
-		setOptionalPathToAeneasBinary(fileName);
-		populateAeneasSetupDivEl(`<div>Path to Linux Aeneas <code>appImage</code>: <code id="displayAppImageFileName">${fileName}</code></div>`);
-			
-	  });
+	if(process.platform ==='darwin'){
+		document.querySelector('#installAeneasLinux').style.display = "none";
+		document.querySelector('#installAeneasMac').style.display = "";
+	}
+	else if(process.platform ==='linux'){
+		document.querySelector('#installAeneasMac').style.display = "none";
+		document.querySelector('#installAeneasLinux').style.display = "";
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 function getOptionalPathToAeneasBinary(){
-	return optionalPathToAeneasBinary
+	// return optionalPathToAeneasBinary
+	return global.optionalPathToAeneasBinary;
 }
 
-function setOptionalPathToAeneasBinary(aeneasBinNewPath){
-	 optionalPathToAeneasBinary = aeneasBinNewPath;
-}
+// global.setOptionalPathToAeneasBinary = function setOptionalPathToAeneasBinary(aeneasBinNewPath){
+// 	 optionalPathToAeneasBinary = aeneasBinNewPath;
+// }
 
 
 

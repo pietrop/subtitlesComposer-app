@@ -37,9 +37,11 @@
     </div>
     <div class="col-xs-12 col-sm-2  col-md-2  col-lg-2">
       <div class="form-group" id="aeneasSetupDiv">
-          <div onclick="showOpenDialogueToSetAeneasPath()">Set aeneaspath</div>
-       <!-- <a id="installAeneas" class="btn btn-default btn-xs" href="https://github.com/sillsdev/aeneas-installer/releases" target="_blank">Install Aeneas aligner</a> -->
-        <!-- <label >You need to have Aeneas installed on your computer for this app to work.</label> -->
+          <div  id="installAeneasLinux" onclick="openFile()" class="btn btn-default btn-xs" >Set aeneas path on linux</div>
+            <code id="aeneaLinuxPath"></code>
+          <a id="installAeneasMac" class="btn btn-default btn-xs" href="https://github.com/sillsdev/aeneas-installer/releases" target="_blank">Install Aeneas aligner on Mac</a>
+          
+          <!-- <label >You need to have Aeneas installed on your computer for this app to work.</label> -->
       </div>
     </div>
     <br>
@@ -182,6 +184,26 @@
   <!-- ./node_modules/bootstrap/dist/js/bootstrap.min.js -->
   <script>
   require('./renderer.js');
+
+const {dialog} = require('electron').remote;
+
+  function openFile () {
+
+    dialog.showOpenDialog({
+          properties: ['openFile']
+      }, function (fileName) {
+          if (fileName !== undefined) {
+        // handle files
+        document.querySelector('#aeneaLinuxPath').innerText = fileName;
+        global.setOptionalPathToAeneasBinary(fileName.trim());
+          }
+      })
+  }
+
+  function setOptionalPathToAeneasBinary(aeneasBinNewPath){
+	 global.optionalPathToAeneasBinary = aeneasBinNewPath;
+}
+
   </script>
   </body>
 </html>
