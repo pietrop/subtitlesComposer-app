@@ -26,11 +26,13 @@ var electronShell = require("electron").shell;
 var dataPath = currentWindow.dataPath.replace(/ /g,"\\ "); 
 var desktopPath = currentWindow.desktopPath;
 var appPath = currentWindow.appPath;
+var homePath = electron.remote.app.getPath('home');
 
 
 console.info("dataPath",dataPath);
 console.info("desktopPath",desktopPath);
 console.info("appPath",appPath);
+console.info("homePath",homePath);
 
 
 var selectFileBtnEl = document.getElementById('selectFileBtn');
@@ -150,13 +152,19 @@ createSubtitlesEl.onclick = function(){
 	// var  subtitlesComposer = require('../node_modules/subtitlescomposer');
 	var tmpOutputFilePath =  path.join(desktopPath, tmpOutputFileName);
 
+	fs.mkdir(homePath+"/tmp",function(err){
+	    if (!err) {
+			console.log("tmp directory created successfully!");
+		}
+	});
+
 	subtitlescomposer({
 		punctuationTextContent: getContentFromTextEditor(),
 		// the number of character per srt subtitle file line.
 		// TODO: add param to specify with default 
 		numberOfCharPerLine: getCharPerLineInput(),
 		// where to save intermediate segmented text file needed for aeneas module 
-		segmentedTextInput: appPath+"/src/tmp/segmentedtext.tmp.txt",
+		segmentedTextInput: homePath+"/tmp/segmentedtext.tmp.txt",
 		//audio or video file to use for aeneas alignement as original source 
 		mediaFile: sourceVideoPath,
 		outputCaptionFile: tmpOutputFilePath,
