@@ -195,7 +195,7 @@ const {dialog} = require('electron').remote;
           if (fileName !== undefined) {
         // handle files
         document.querySelector('#aeneaLinuxPath').innerText = fileName;
-        global.setOptionalPathToAeneasBinary(fileName.trim());
+        global.setOptionalPathToAeneasBinary(fileName[0].trim());
           }
       })
   }
