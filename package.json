@@ -7,6 +7,7 @@
     "pack:mac": "build --dir --mac --x64",
     "build:mac": "build --mac --x64",
     "build:linux": "build --linux  --x64",
+    "build:mwl:publish:always": "electron-builder -ml --publish always",
     "start": "electron ."
   },
   "repository": "https://github.com/electron/electron-quick-start",
@@ -21,9 +22,14 @@
   "license": "MIT",
   "devDependencies": {
     "electron": "^1.6.17",
-    "electron-builder": "^19.16.2"
+    "electron-builder": "^19.56.2"
   },
   "build": {
+    "publish": {
+      "provider": "github",
+      "releaseType": "prerelease",
+      "vPrefixedTagName": false
+    },
     "appId": "org.subtitlesComposer.subtitlesComposer-electron",
     "asar": false,
     "dmg": {

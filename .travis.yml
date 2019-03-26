@@ -1,36 +1,33 @@
+os: osx
+osx_image: xcode9.4
 language: node_js
-node_js:
-  - "7"
-
-os: linux
-dist: trusty
+node_js: "8"
 sudo: required
 
-cache:
-  directories:
-  - node_modules
-  - $HOME/.electron
-  - $HOME/.npm
-  - $HOME/.nvm
+env:
+  global:
+    # from https://www.electron.build/configuration/publish#githuboptions
+    - ELECTRON_CACHE=$HOME/.cache/electron
+    - ELECTRON_BUILDER_CACHE=$HOME/.cache/electron-builder
 
-addons:
-  apt:
-    packages:
-      - libgnome-keyring-dev
-      - icnsutils
+# specifying npm version as
+# by default travis seemed to sue 4.2.0
+# https://docs.travis-ci.com/user/languages/javascript-with-nodejs/#using-a-specific-npm-version
 
 install:
   - node --version
+  - npm i -g npm@5
   - npm --version
   - npm install
+  # - npm run make_js
 
 script:
-#  - npm run test
-# - npm run build
-  - npm run build:linux
-  - find . | grep AppImage
-  - wget -c https://github.com/probonopd/uploadtool/raw/master/upload.sh
-  - bash upload.sh ./dist/subtitles-composer-app-*-x86_64.AppImage
+  - npm run build:ml:publish:always;
+# - npm run adobe-panel-package-sign-build
+  - ls ./dist;
+  - find . | grep mac.zip;
+  - find . | grep x86_64.AppImage;
+  - find . | grep .exe;
 
 branches:
   except:
