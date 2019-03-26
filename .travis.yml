@@ -27,7 +27,7 @@ script:
   - ls ./dist;
   - find . | grep mac.zip;
   - find . | grep x86_64.AppImage;
-  - find . | grep .exe;
+  # - find . | grep .exe;
 
 branches:
   except:
