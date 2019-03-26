@@ -1,15 +1,16 @@
 {
   "name": "subtitles-composer-app",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "An OS X app to generate subtitles captions files from plain text transcriptions and audio or video, media files.",
   "main": "./src/main.js",
   "scripts": {
     "pack:mac": "build --dir --mac --x64",
     "build:mac": "build --mac --x64",
     "build:linux": "build --linux  --x64",
+    "build:ml:publish:always": "electron-builder -ml --publish always",
     "start": "electron ."
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/pietrop/subtitlesComposer-app",
   "keywords": [
     "Electron",
     "quick",
@@ -21,9 +22,14 @@
   "license": "MIT",
   "devDependencies": {
     "electron": "^1.6.17",
-    "electron-builder": "^19.16.2"
+    "electron-builder": "^19.56.2"
   },
   "build": {
+    "publish": {
+      "provider": "github",
+      "releaseType": "prerelease",
+      "vPrefixedTagName": false
+    },
     "appId": "org.subtitlesComposer.subtitlesComposer-electron",
     "asar": false,
     "dmg": {
