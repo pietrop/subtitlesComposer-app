@@ -10,7 +10,7 @@
     "build:ml:publish:always": "electron-builder -ml --publish always",
     "start": "electron ."
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/pietrop/subtitlesComposer-app",
   "keywords": [
     "Electron",
     "quick",
