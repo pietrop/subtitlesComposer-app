@@ -7,7 +7,7 @@
     "pack:mac": "build --dir --mac --x64",
     "build:mac": "build --mac --x64",
     "build:linux": "build --linux  --x64",
-    "build:mwl:publish:always": "electron-builder -ml --publish always",
+    "build:ml:publish:always": "electron-builder -ml --publish always",
     "start": "electron ."
   },
   "repository": "https://github.com/electron/electron-quick-start",
