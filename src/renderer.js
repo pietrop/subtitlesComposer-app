@@ -13,8 +13,18 @@ const path = require('path');
 const electron = require('electron');
 const {shell} = require('electron')
 const {dialog} = require('electron').remote;
+const  remote = require('electron').remote;
 
 
+/** 
+* https://www.npmjs.com/package/electron-in-page-search 
+* setup electro/chrome search plugin
+*/
+const searchInPage = require('electron-in-page-search').default;
+const inPageSearch = searchInPage(remote.getCurrentWebContents());
+document.getElementById('searchBtn').addEventListener('click', () => {
+    inPageSearch.openSearchWindow();
+});
 
 const ffmpegFormats = require('./lib/ffmpeg_formats/index.js');
 const convertTimeCodeToSeconds = require('./lib/convert_timecode_to_seconds');
@@ -329,18 +339,6 @@ function setAeneasSetupInstructions() {
 	}
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 function getOptionalPathToAeneasBinary(){
 	// return optionalPathToAeneasBinary
 	return global.optionalPathToAeneasBinary;
@@ -349,8 +347,6 @@ function getOptionalPathToAeneasBinary(){
 // global.setOptionalPathToAeneasBinary = function setOptionalPathToAeneasBinary(aeneasBinNewPath){
 // 	 optionalPathToAeneasBinary = aeneasBinNewPath;
 // }
-
-
 
 function populateAeneasSetupDivEl(html){
 	aeneasSetupDivEl.innerHTML=html;

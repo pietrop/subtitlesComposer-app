@@ -20,6 +20,7 @@
   <div class="row">
     <div class="col-xs-12 col-sm-5  col-md-5  col-lg-5">
         <!-- <label >Select audio/video file</label> -->
+        
        <a  id="selectFileBtn" class="btn btn-primary btn-sm">Select Video or Audio file </a>
         <a id="reset" class="btn btn-default btn-sm" href="#">X</a>
         <br>
@@ -36,11 +37,11 @@
       <!-- Add buttons to create srt and save -->
     </div>
     <div class="col-xs-12 col-sm-2  col-md-2  col-lg-2">
+        <a  class="btn btn-default btn-sm" id="searchBtn">Search</a>
       <div class="form-group" id="aeneasSetupDiv">
           <div  id="installAeneasLinux" onclick="openFile()" class="btn btn-default btn-xs" >Set aeneas path on linux</div>
             <code id="aeneaLinuxPath"></code>
           <a id="installAeneasMac" class="btn btn-default btn-xs" href="https://github.com/sillsdev/aeneas-installer/releases" target="_blank">Install Aeneas aligner on Mac</a>
-          
           <!-- <label >You need to have Aeneas installed on your computer for this app to work.</label> -->
       </div>
     </div>
@@ -76,7 +77,7 @@
       </div>
 
       <label  class="control-label">Characters per line</label>
-      <input type="text" class="form-control" id="charPerLineInput" placeholder="head tail" value="35">
+      <input type="text" class="form-control" id="charPerLineInput" placeholder="head tail" value="42">
       <label  class="control-label"><small>Number of characters, including spaces, that you would like to see on screen on each line in the subtitle file.</small></label>
 
 
@@ -177,11 +178,25 @@
   }
 
   </style>
+  <style>
+    /* https://www.npmjs.com/package/electron-in-page-search */
+  .electron-in-page-search-window {
+      width: 300px;
+      height: 36px;
+      background-color: white;
+      top: 0;
+      position: absolute;
+      right: 0;
+  }
 
-  <script>window.$ = window.jQuery = require('../node_modules/jquery/dist/jquery.js');</script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
-  <!-- ./node_modules/bootstrap/dist/js/bootstrap.min.js -->
+  .electron-in-page-search-window.search-inactive {
+  visibility: hidden;
+}
+ 
+.electron-in-page-search-window.search-active {
+  visibility: visible;
+}
+</style>
   <script>
   require('./renderer.js');
 

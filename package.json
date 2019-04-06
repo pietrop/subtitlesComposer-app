@@ -1,6 +1,6 @@
 {
   "name": "subtitles-composer-app",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "An OS X app to generate subtitles captions files from plain text transcriptions and audio or video, media files.",
   "main": "./src/main.js",
   "scripts": {
@@ -61,12 +61,7 @@
   },
   "dependencies": {
     "electron-in-page-search": "^1.2.3",
-    "electron-spawn": "^5.0.0",
     "fix-path": "^2.1.0",
-    "jquery": "^3.2.1",
-    "sbd": "^1.0.12",
-    "shell-escape": "^0.2.0",
-    "subtitle_scraper": "^1.2.0",
     "subtitlescomposer": "git+https://github.com/pietrop/subtitlesComposer.git"
   }
 }
