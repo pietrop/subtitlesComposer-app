@@ -1,5 +1,7 @@
 # `subtitleComposer` App 
 
+[![Build Status](https://travis-ci.org/pietrop/subtitlesComposer-app.svg?branch=master)](https://travis-ci.org/pietrop/subtitlesComposer-app)
+
 A simple os x desktop app built in electron, using [Aeneas][aeneas] under the hood to generate captions files from media(audio or video) and plain text transcriptions without time-codes.
 
 ##  Usage
