@@ -1,6 +1,6 @@
 {
   "name": "subtitles-composer-app",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "An OS X app to generate subtitles captions files from plain text transcriptions and audio or video, media files.",
   "main": "./src/main.js",
   "scripts": {
