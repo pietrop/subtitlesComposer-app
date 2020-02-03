@@ -351,3 +351,12 @@ function getOptionalPathToAeneasBinary(){
 function populateAeneasSetupDivEl(html){
 	aeneasSetupDivEl.innerHTML=html;
 }
+
+const charCountDisplayEl = document.querySelector('#charCountDisplay');
+window.addEventListener('mouseup', e => {
+	const text = document.getSelection().toString();
+	const length = document.getSelection().toString().length;
+	charCountDisplayEl.value = length;
+	console.log(length)
+})
+  
