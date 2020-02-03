@@ -29,7 +29,9 @@ document.getElementById('searchBtn').addEventListener('click', () => {
 const ffmpegFormats = require('./lib/ffmpeg_formats/index.js');
 const convertTimeCodeToSeconds = require('./lib/convert_timecode_to_seconds');
 
-var  subtitlescomposer = require('subtitlescomposer');
+const  subtitlescomposer = require('subtitlescomposer');
+const  subtitlescomposerPrepText = require('subtitlescomposer').prepText;
+const  subtitlescomposerRunAeneasComand = require('subtitlescomposer').runAeneasComand;
 
 var currentWindow = electron.remote.getCurrentWindow();
 var electronShell = require("electron").shell;
@@ -196,14 +198,10 @@ createSubtitlesEl.onclick = function(){
 			var result = fs.readFileSync(tmpOutputFilePathEnd).toString();
 			console.log(result);
 
-
 			successMessage(desktopPath+"/",tmpOutputFileNameEnd, getCaptionsFileFormat());
 			// shell.openItem(desktopPath);
 			// shell.openItem(filePath);
-			disableCreateSubtitlesBtn(false);
-			
-
-			
+			disableCreateSubtitlesBtn(false);			
 	});
 
 
