@@ -50,6 +50,7 @@ console.info("homePath",homePath);
 var selectFileBtnEl = document.getElementById('selectFileBtn');
 var selectTextFileBtnEl = document.getElementById('selectTextFileBtn');
 var createSubtitlesEl = document.getElementById('createSubtitles');
+const segmentTextEl = document.getElementById('segmentText');
 var videoPreviewEl = document.getElementById('videoPreview');
 var textBoxEl = document.getElementById('textBox');
 var checkboxInputEl = document.getElementById('checkboxInput');
@@ -151,7 +152,6 @@ function disableCreateSubtitlesBtn(bool){
 }
 
 
-
 createSubtitlesEl.onclick = function(){
 	console.info("Creating subtitles");
 	disableCreateSubtitlesBtn(true);
@@ -170,8 +170,10 @@ createSubtitlesEl.onclick = function(){
 		}
 	});
 
-	subtitlescomposer({
-		punctuationTextContent: getContentFromTextEditor(),
+	fs.writeFileSync(homePath+"/tmp/segmentedtext.tmp.txt", getContentFromTextEditor());
+
+	subtitlescomposerRunAeneasComand({
+		// punctuationTextContent: getContentFromTextEditor(),
 		// the number of character per srt subtitle file line.
 		// TODO: add param to specify with default 
 		numberOfCharPerLine: getCharPerLineInput(),
@@ -213,6 +215,70 @@ createSubtitlesEl.onclick = function(){
 	// alert("your file has been saved on the desktop "+newFilePath);
 
 };
+
+
+
+// createSubtitlesEl.onclick = function(){
+// 	console.info("Creating subtitles");
+// 	disableCreateSubtitlesBtn(true);
+// 	//reset notice box.
+// 	populateNoticeBox("");
+// 	//assumes allignment has been run, perhaps add a boolean flag to check that it is the case. 
+
+// 	var tmpInputBaseFileName =  path.basename(sourceVideoPath.replace(/(\s+)/g, '\\$1'));
+// 	var tmpOutputFileName = tmpInputBaseFileName+"."+getCaptionsFileFormat();
+// 	// var  subtitlesComposer = require('../node_modules/subtitlescomposer');
+// 	var tmpOutputFilePath =  path.join(desktopPath, tmpOutputFileName);
+
+// 	fs.mkdir(homePath+"/tmp",function(err){
+// 	    if (!err) {
+// 			console.log("tmp directory created successfully!");
+// 		}
+// 	});
+
+// 	subtitlescomposer({
+// 		punctuationTextContent: getContentFromTextEditor(),
+// 		// the number of character per srt subtitle file line.
+// 		// TODO: add param to specify with default 
+// 		numberOfCharPerLine: getCharPerLineInput(),
+// 		// where to save intermediate segmented text file needed for aeneas module 
+// 		segmentedTextInput: homePath+"/tmp/segmentedtext.tmp.txt",
+// 		//audio or video file to use for aeneas alignement as original source 
+// 		mediaFile: sourceVideoPath,
+// 		outputCaptionFile: tmpOutputFilePath,
+// 		//TODO Add as possibility for costumize in UI
+// 		//ignore this many seconds at end of audio
+// 		audio_file_tail_length: getInputEndTail(),
+// 		//ignore this many seconds at begin of audio
+// 		audio_file_head_length : getInputHeadTail(),
+// 		captionFileFormat : getCaptionsFileFormat(),
+// 		language: getLanguageForAlignement(),
+// 		optionalPathToAeneasBinary: getOptionalPathToAeneasBinary()
+// 		}, 
+// 		function(filePath){
+// 			console.log('filePath', filePath);
+
+// 			var tmpInputBaseFileNameEnd =  path.basename(sourceVideoPath);
+// 			var tmpOutputFileNameEnd 	= tmpInputBaseFileNameEnd+"."+getCaptionsFileFormat();
+// 			var tmpOutputFilePathEnd 	=  path.join(desktopPath, tmpOutputFileNameEnd);
+// 			var result = fs.readFileSync(tmpOutputFilePathEnd).toString();
+// 			console.log(result);
+
+// 			successMessage(desktopPath+"/",tmpOutputFileNameEnd, getCaptionsFileFormat());
+// 			// shell.openItem(desktopPath);
+// 			// shell.openItem(filePath);
+// 			disableCreateSubtitlesBtn(false);			
+// 	});
+
+
+// 	// var fileName = path.basename(sourceVideoPath);
+// 	// //prompt user on where to save. add srt extension if possible. 
+// 	// var newFilePath = desktopPath +"/"+ fileName+"."+getCaptionsFileFormat();
+// 	// fs.writeFileSync(newFilePath, getContentFromTextEditor(), 'utf8');
+// 	// // or just save to desktop. 
+// 	// alert("your file has been saved on the desktop "+newFilePath);
+
+// };
 
 
 function successMessage(path,fileName, fileType){
@@ -291,7 +357,7 @@ function openFile(path){
 
 function setTextBoxContent(text){
 	//todo: sanitise `text`
-	textBoxEl.innerHTML = text;
+	textBoxEl.innerText = text;
 }
 
 function getInputHeadTail(){
@@ -358,3 +424,19 @@ window.addEventListener('mouseup', e => {
 	console.log(length)
 })
   
+
+segmentTextEl.onclick = ()=>{
+	populateNoticeBox("Segmenting text...");
+	// disableCreateSubtitlesBtn(true);
+
+	subtitlescomposerPrepText({
+		punctuationTextContent: getContentFromTextEditor(),
+		numberOfCharPerLine: getCharPerLineInput()
+		}, 
+		(text)=>{
+			populateNoticeBox("Segmented text, review and click create subtitles to continue");
+			console.log(text)
+			// disableCreateSubtitlesBtn(false);
+			setTextBoxContent(text)
+		})
+}
