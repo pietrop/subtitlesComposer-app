@@ -78,7 +78,15 @@ function createWindow () {
         role: 'window',
         submenu: [
           {role: 'minimize'},
-          {role: 'close'}
+          {role: 'close'},
+          { type: 'separator' },
+          {
+              label: 'New main window',
+              click() {
+                  createWindow();
+              },
+              accelerator: 'CmdOrCtrl+N'
+          }
         ]},{
         role: 'help',
         submenu: [
