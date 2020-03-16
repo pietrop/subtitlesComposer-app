@@ -18,25 +18,22 @@
 
 <div class="container-fluid" >
   <div class="row">
-    <div class="col-xs-12 col-sm-5  col-md-5  col-lg-5">
+    <div class="col-xs-12 col-sm-4  col-md-4  col-lg-4">
+ 
         <!-- <label >Select audio/video file</label> -->
-        
-       <a  id="selectFileBtn" class="btn btn-primary btn-sm">Select Video or Audio file </a>
+        <a  id="selectFileBtn" class="btn btn-primary btn-sm">Select Video or Audio file </a>
         <a id="reset" class="btn btn-default btn-sm" href="#">X</a>
         <br>
         <code id="displayInputFileName"></code>
     </div>
     <div class="col-xs-12 col-sm-5  col-md-5  col-lg-5">
-      
        <div class="form-group">
         <a id="selectTextFileBtn" class="btn btn-primary btn-sm" href="#">Select text file <code>.txt</code></a>
         <label >Or copy and paste text content here, with or without punctuation.</label>
        </div>
-
-
       <!-- Add buttons to create srt and save -->
     </div>
-    <div class="col-xs-12 col-sm-2  col-md-2  col-lg-2">
+    <div class="col-xs-12 col-sm-3  col-md-3  col-lg-3">
         <a  class="btn btn-default btn-sm" id="searchBtn">Search</a>
       <div class="form-group" id="aeneasSetupDiv">
           <div  id="installAeneasLinux" onclick="openFile()" class="btn btn-default btn-xs" >Set aeneas path on linux</div>
@@ -48,13 +45,41 @@
     <br>
   </div>
   <div class="row">
-    <div class="col-xs-12 col-sm-5  col-md-5  col-lg-5">
+    <div class="col-xs-12 col-sm-4  col-md-4  col-lg-4">
+      <div class="row">
           <div id="videoPreview" class="embed-responsive embed-responsive-16by9">
           </div>
-        <br><br>
-
+          <br>
+          <br>
         <div class="noticeBox"></div>
-        
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-12  col-md-12  col-lg-12">
+        <!-- Settings -->
+      
+          <!-- char count -->
+          <label  class="control-label">Selection character count</label>
+          <input type="text" class="form-control" id="charCountDisplay" placeholder="" value="0" disabled>
+          <label  class="control-label"><small>If you select some text in the text box, the character count will be updated here</small></label>
+          <!-- end char count  -->
+
+          <div class="checkbox">
+            <label>
+              <input id="checkboxInput" type="checkbox" > <small>Pause video while typing </small>
+            </label>
+            <label  class="control-label"><small>If you want to correct the text using this tool, it can auto pause the video while you are typing.</small></label>
+          </div>
+
+          <!-- Set folder  -->
+          <hr>
+          <a  id="selectDestPathBtn" class="btn btn-default btn-sm btn-block">Select Destination</a>
+          <!-- <a id="reset" class="btn btn-default btn-sm" href="#">X</a> -->
+          <br>
+          <code id="displayDestPath"></code>
+          <!--  -->
+
+        </div>
+      </div>
     </div>
  
     <div class="col-xs-12 col-sm-5  col-md-5  col-lg-5">
@@ -63,105 +88,83 @@
 
       </div>
     </div>
-
-
-    <div class="col-xs-12 col-sm-2  col-md-2  col-lg-2">
-
-
-      <!-- Info -->
-      <div class="checkbox">
-        <label>
-          <input id="checkboxInput" type="checkbox" > <small>Pause video while typing </small>
-        </label>
-      </div>
-
-      <hr>
-      <!-- char count -->
-      <label  class="control-label">Selection character count</label>
-      <input type="text" class="form-control" id="charCountDisplay" placeholder="" value="0" disabled>
-      <label  class="control-label"><small>If you select some text in the text box, the character count will be updated here</small></label>
-      <!-- end char count  -->
-
+    <div class="col-xs-12 col-sm-3  col-md-3  col-lg-3">
+   
       <label  class="control-label">Characters per line</label>
       <input type="text" class="form-control" id="charPerLineInput" placeholder="head tail" value="37">
       <label  class="control-label"><small>Number of characters, including spaces, that you would like to see on screen on each line in the subtitle file.</small></label>
 
-
       <label  class="control-label">Number of lines per screen</label>
       <input type="text" class="form-control" id="linesPerScreen" placeholder="head tail" value="2" disabled>
 
+      <label  class="control-label">Head Tail</label>
+      <input type="text" class="form-control" id="inputHeadTail" placeholder="head tail" value="00:00:00,000">
+      <label><small>ignore this many seconds at begin of audio</small></label>
 
-       <label  class="control-label">Head Tail</label>
-       <input type="text" class="form-control" id="inputHeadTail" placeholder="head tail" value="00:00:00,000">
-       <label><small>ignore this many seconds at begin of audio</small></label>
-       <label class=" control-label">End Tail</label>
-       <input type="text" class="form-control" id="inputEndTail" placeholder="End tail" value="00:00:00,000">
-       <label><small>ignore this many seconds at end of audio</small></label>
-       <!-- <a id="searchBtn" class="btn btn-default btn-xs" href="#">search</a> -->
+      <label class=" control-label">End Tail</label>
+      <input type="text" class="form-control" id="inputEndTail" placeholder="End tail" value="00:00:00,000">
+      <label><small>ignore this many seconds at end of audio</small></label>
 
-<div class="form-group">
-  <!-- Espeek languages http://espeak.sourceforge.net/languages.html -->
-      <label for="select" class=" control-label">Languages for alignement</label>
-        <select class="form-control" id="selectLanguageForAlignement">
-          <option value="eng">English</option>
-          <option value="it">Italian</option>
-          <option value="af">  Afrikaans </option>
-          <option value="bs">  Bosnian </option>
-          <option value="ca">  Catalan </option>
-          <option value="cs">  Czech </option>
-          <option value="da">  Danish </option>
-          <option value="de">  German </option>
-          <option value="el">  Greek </option>
-          <option value="eo">  Esperanto </option>
-          <option value="es">  Spanish </option>
-          <option value="es-la">  Spanish - Latin America </option>
-          <option value="fi">  Finnish </option>
-          <option value="fr">  French </option>
-          <option value="hr">  Croatian </option>
-          <option value="hu">  Hungarian </option>
-          <option value="lv">  Latvian </option>
-          <option value="nl">  Dutch </option>
-          <option value="pl">  Polish </option>
-          <option value="pt">  Portuguese (Brazil) </option>
-          <option value="pt-pt">  Portuguese (European) </option>
-          <option value="ro">  Romanian </option>
-          <option value="sk">  Slovak </option>
-          <option value="sr">  Serbian </option>
-          <option value="sv">  Swedish </option>
-          <option value="sw">  Swahihi </option>
-          <option value="ta">  Tamil </option>
-          <option value="tr">  Turkish </option>
-          <option value="zh">  Mandarin Chinese </option>
-        </select>
-    </div>
+      <div class="form-group">
+        <!-- Espeek languages http://espeak.sourceforge.net/languages.html -->
+          <label for="select" class=" control-label">Languages for alignement</label>
+            <select class="form-control" id="selectLanguageForAlignement">
+              <option value="eng">English</option>
+              <option value="it">Italian</option>
+              <option value="af">  Afrikaans </option>
+              <option value="bs">  Bosnian </option>
+              <option value="ca">  Catalan </option>
+              <option value="cs">  Czech </option>
+              <option value="da">  Danish </option>
+              <option value="de">  German </option>
+              <option value="el">  Greek </option>
+              <option value="eo">  Esperanto </option>
+              <option value="es">  Spanish </option>
+              <option value="es-la">  Spanish - Latin America </option>
+              <option value="fi">  Finnish </option>
+              <option value="fr">  French </option>
+              <option value="hr">  Croatian </option>
+              <option value="hu">  Hungarian </option>
+              <option value="lv">  Latvian </option>
+              <option value="nl">  Dutch </option>
+              <option value="pl">  Polish </option>
+              <option value="pt">  Portuguese (Brazil) </option>
+              <option value="pt-pt">  Portuguese (European) </option>
+              <option value="ro">  Romanian </option>
+              <option value="sk">  Slovak </option>
+              <option value="sr">  Serbian </option>
+              <option value="sv">  Swedish </option>
+              <option value="sw">  Swahihi </option>
+              <option value="ta">  Tamil </option>
+              <option value="tr">  Turkish </option>
+              <option value="zh">  Mandarin Chinese </option>
+            </select>
+        </div>
 
-    <!-- Aneneas supported formats https://www.readbeyond.it/aeneas/ -->
-    <div class="form-group">
-      <label for="select" class=" control-label">Subtitles captions  file format</label>
-        <select class="form-control" id="selectCaptionFormat">
-          <option value="srt">SRT</option>
-          <option value="sbv">SBV</option>
-          <option value="ttml">TTML</option>
-          <option value="vtt">VTT</option>
-          <option value="json">JSON</option>
-          <option value="aud">AUD</option>
-          <option value="csv">CSV</option>
-          <option value="ssv">SSV</option>
-          <option value="tsv">TSV</option>
-          <option value="txt">TXT</option>
-          <option value="xml">XML</option>
-        </select>
-    </div>
+        <!-- Aneneas supported formats https://www.readbeyond.it/aeneas/ -->
+        <div class="form-group">
+          <label for="select" class=" control-label">Subtitles captions  file format</label>
+            <select class="form-control" id="selectCaptionFormat">
+              <option value="srt">SRT</option>
+              <option value="sbv">SBV</option>
+              <option value="ttml">TTML</option>
+              <option value="vtt">VTT</option>
+              <option value="json">JSON</option>
+              <option value="aud">AUD</option>
+              <option value="csv">CSV</option>
+              <option value="ssv">SSV</option>
+              <option value="tsv">TSV</option>
+              <option value="txt">TXT</option>
+              <option value="xml">XML</option>
+            </select>
+        </div>
 
-      <hr>
-
-       
-       <button id="segmentText" class="btn btn-warning btn-sm" href="#">Segment Text</button>
-       <br>
-       <button id="createSubtitles" class="btn btn-warning btn-sm" href="#">Create Subtitles</button>
-
-
-    </div>
+        <div class="btn-group" role="group" aria-label="Basic example">
+          <button id="segmentText" class="btn btn-warning btn-sm" href="#">Segment Text</button>
+          <button id="createSubtitles" class="btn btn-warning btn-sm" href="#" disabled>Create Subtitles</button>
+        </div>
+        </div>
+        <!--  -->
   </div>
   </div>
 

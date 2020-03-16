@@ -41,11 +41,11 @@ var appPath = currentWindow.appPath;
 var homePath = electron.remote.app.getPath('home');
 
 
+
 console.info("dataPath",dataPath);
 console.info("desktopPath",desktopPath);
 console.info("appPath",appPath);
 console.info("homePath",homePath);
-
 
 var selectFileBtnEl = document.getElementById('selectFileBtn');
 var selectTextFileBtnEl = document.getElementById('selectTextFileBtn');
@@ -71,11 +71,56 @@ var resetEl = document.querySelector('#reset');
 
 var aeneasSetupDivEl = document.querySelector('#aeneasSetupDiv');
 
+const displayDestPathEl = document.getElementById('displayDestPath');
+
+
 var timeout = null;
 var resumeTiypingTimeInterval = 600;
 var startStopPlayingVideoOntyping = false;
 var sourceVideoPath ="";
 global.optionalPathToAeneasBinary = "";
+
+
+let defaultCaptionName = path.join(desktopPath,`default.${getCaptionsFileFormat()}`);
+
+// setDestPath(defaultCaptionName);
+setOutputFileDest(defaultCaptionName);
+
+function setDestPathDisplay(dest){
+	displayDestPathEl.innerText = dest;
+}
+
+function getOutputFileName(){
+	return defaultCaptionName;
+}
+
+function setOutputFileName(dest){
+	const destWithExt = `${dest}.${getCaptionsFileFormat()}`
+	setDestPathDisplay(destWithExt)
+	defaultCaptionName = destWithExt;
+}
+
+function setOutputFileDest(dest){
+	const destWithExt = `${dest}`
+	setDestPathDisplay(destWithExt)
+	defaultCaptionName = destWithExt;
+}
+
+function setNewExtensionOnOutputFileName(ext){
+	const outPutFileName = getOutputFileName();
+	const parsedPath = path.parse(outPutFileName);
+	console.log(parsedPath);
+	const dir = parsedPath.dir;
+	const name = parsedPath.name;
+	const newPath = path.join(dir,`${name}.${ext}`)
+	setOutputFileDest(newPath)
+}
+
+function formatOutputFileName(fileName){
+	// var tmpInputBaseFileName =  path.basename(sourceVideoPath.replace(/(\s+)/g, '\\$1'));
+	return fileName+"."+getCaptionsFileFormat();
+}
+
 
 setAeneasSetupInstructions();
 
@@ -118,7 +163,7 @@ selectFileBtnEl.onclick = function(){
 		populateNoticeBox("");
 		setDisplayInputFileNameEl(sourceVideoPath);
 		// loadEditorWithDummyText();
-
+		// createSubtitlesEl.disabled = false;
 	});
 };
 
@@ -141,6 +186,22 @@ selectTextFileBtnEl.onclick = function(){
 	});
 };
 
+selectDestPathBtn.onclick = function(){
+	
+	dialog.showSaveDialog(
+	 function(file){
+		console.info('saving file:', file);
+	// var tmpTextFilePath = file[0];
+	// var tmpTextFile = fs.readFileSync(tmpTextFilePath).toString('utf-8');
+	// setTextBoxContent(tmpTextFile)
+	//reset 
+	// populateNoticeBox("");
+	// loadEditorWithDummyText();
+	
+		setOutputFileName(file)
+	});
+}
+
 function disableCreateSubtitlesBtn(bool){
 	if(bool){
 		createSubtitlesEl.innerText = "Processing ...";
@@ -160,9 +221,10 @@ createSubtitlesEl.onclick = function(){
 	//assumes allignment has been run, perhaps add a boolean flag to check that it is the case. 
 
 	var tmpInputBaseFileName =  path.basename(sourceVideoPath.replace(/(\s+)/g, '\\$1'));
-	var tmpOutputFileName = tmpInputBaseFileName+"."+getCaptionsFileFormat();
+	// var tmpOutputFileName = tmpInputBaseFileName+"."+getCaptionsFileFormat();
 	// var  subtitlesComposer = require('../node_modules/subtitlescomposer');
-	var tmpOutputFilePath =  path.join(desktopPath, tmpOutputFileName);
+	// var tmpOutputFilePath =  path.join(desktopPath, tmpOutputFileName);
+	const tmpOutputFilePath = getOutputFileName().replace(/(\s+)/g, '\\$1');
 
 	fs.mkdir(homePath+"/tmp",function(err){
 	    if (!err) {
@@ -178,10 +240,11 @@ createSubtitlesEl.onclick = function(){
 		// TODO: add param to specify with default 
 		numberOfCharPerLine: getCharPerLineInput(),
 		// where to save intermediate segmented text file needed for aeneas module 
-		segmentedTextInput: homePath+"/tmp/segmentedtext.tmp.txt",
+		segmentedTextInput: path.join(homePath,'tmp','segmentedtext.tmp.txt'),
 		//audio or video file to use for aeneas alignement as original source 
 		mediaFile: sourceVideoPath,
 		outputCaptionFile: tmpOutputFilePath,
+		// outputCaptionFile: getOutputFileName(),
 		//TODO Add as possibility for costumize in UI
 		//ignore this many seconds at end of audio
 		audio_file_tail_length: getInputEndTail(),
@@ -194,98 +257,27 @@ createSubtitlesEl.onclick = function(){
 		function(filePath){
 			console.log('filePath', filePath);
 
-			var tmpInputBaseFileNameEnd =  path.basename(sourceVideoPath);
-			var tmpOutputFileNameEnd 	= tmpInputBaseFileNameEnd+"."+getCaptionsFileFormat();
-			var tmpOutputFilePathEnd 	=  path.join(desktopPath, tmpOutputFileNameEnd);
-			var result = fs.readFileSync(tmpOutputFilePathEnd).toString();
-			console.log(result);
+			// var tmpInputBaseFileNameEnd =  path.basename(sourceVideoPath);
+			// var tmpOutputFileNameEnd 	= tmpInputBaseFileNameEnd+"."+getCaptionsFileFormat();
+			// var tmpOutputFilePathEnd 	=  path.join(desktopPath, tmpOutputFileNameEnd);
+			// var result = fs.readFileSync(tmpOutputFilePathEnd).toString();
+			// console.log(result);
 
-			successMessage(desktopPath+"/",tmpOutputFileNameEnd, getCaptionsFileFormat());
+			successMessage(path.parse(tmpOutputFilePath).dir,path.parse(tmpOutputFilePath).name, getCaptionsFileFormat());
+			// successMessage(tmpOutputFilePath);
 			// shell.openItem(desktopPath);
 			// shell.openItem(filePath);
 			disableCreateSubtitlesBtn(false);			
 	});
 
-
-	// var fileName = path.basename(sourceVideoPath);
-	// //prompt user on where to save. add srt extension if possible. 
-	// var newFilePath = desktopPath +"/"+ fileName+"."+getCaptionsFileFormat();
-	// fs.writeFileSync(newFilePath, getContentFromTextEditor(), 'utf8');
-	// // or just save to desktop. 
-	// alert("your file has been saved on the desktop "+newFilePath);
-
 };
-
-
-
-// createSubtitlesEl.onclick = function(){
-// 	console.info("Creating subtitles");
-// 	disableCreateSubtitlesBtn(true);
-// 	//reset notice box.
-// 	populateNoticeBox("");
-// 	//assumes allignment has been run, perhaps add a boolean flag to check that it is the case. 
-
-// 	var tmpInputBaseFileName =  path.basename(sourceVideoPath.replace(/(\s+)/g, '\\$1'));
-// 	var tmpOutputFileName = tmpInputBaseFileName+"."+getCaptionsFileFormat();
-// 	// var  subtitlesComposer = require('../node_modules/subtitlescomposer');
-// 	var tmpOutputFilePath =  path.join(desktopPath, tmpOutputFileName);
-
-// 	fs.mkdir(homePath+"/tmp",function(err){
-// 	    if (!err) {
-// 			console.log("tmp directory created successfully!");
-// 		}
-// 	});
-
-// 	subtitlescomposer({
-// 		punctuationTextContent: getContentFromTextEditor(),
-// 		// the number of character per srt subtitle file line.
-// 		// TODO: add param to specify with default 
-// 		numberOfCharPerLine: getCharPerLineInput(),
-// 		// where to save intermediate segmented text file needed for aeneas module 
-// 		segmentedTextInput: homePath+"/tmp/segmentedtext.tmp.txt",
-// 		//audio or video file to use for aeneas alignement as original source 
-// 		mediaFile: sourceVideoPath,
-// 		outputCaptionFile: tmpOutputFilePath,
-// 		//TODO Add as possibility for costumize in UI
-// 		//ignore this many seconds at end of audio
-// 		audio_file_tail_length: getInputEndTail(),
-// 		//ignore this many seconds at begin of audio
-// 		audio_file_head_length : getInputHeadTail(),
-// 		captionFileFormat : getCaptionsFileFormat(),
-// 		language: getLanguageForAlignement(),
-// 		optionalPathToAeneasBinary: getOptionalPathToAeneasBinary()
-// 		}, 
-// 		function(filePath){
-// 			console.log('filePath', filePath);
-
-// 			var tmpInputBaseFileNameEnd =  path.basename(sourceVideoPath);
-// 			var tmpOutputFileNameEnd 	= tmpInputBaseFileNameEnd+"."+getCaptionsFileFormat();
-// 			var tmpOutputFilePathEnd 	=  path.join(desktopPath, tmpOutputFileNameEnd);
-// 			var result = fs.readFileSync(tmpOutputFilePathEnd).toString();
-// 			console.log(result);
-
-// 			successMessage(desktopPath+"/",tmpOutputFileNameEnd, getCaptionsFileFormat());
-// 			// shell.openItem(desktopPath);
-// 			// shell.openItem(filePath);
-// 			disableCreateSubtitlesBtn(false);			
-// 	});
-
-
-// 	// var fileName = path.basename(sourceVideoPath);
-// 	// //prompt user on where to save. add srt extension if possible. 
-// 	// var newFilePath = desktopPath +"/"+ fileName+"."+getCaptionsFileFormat();
-// 	// fs.writeFileSync(newFilePath, getContentFromTextEditor(), 'utf8');
-// 	// // or just save to desktop. 
-// 	// alert("your file has been saved on the desktop "+newFilePath);
-
-// };
 
 
 function successMessage(path,fileName, fileType){
 
 	var message = `<strong>Success!</strong> a ${fileType} has been saved <br>
-	<strong id="openPath">${path}</strong><br>
-	<strong id="openFile">${fileName}</strong>`
+	<strong id="openPath">${path}/</strong><br>
+	<strong id="openFile">${fileName}.${fileType}</strong>`
 
 	populateNoticeBox(makeNotice(message))
 }
@@ -307,8 +299,14 @@ function getCaptionsFileFormat(){
 	return selectCaptionFormatEl.value ;
 }
 
+selectCaptionFormatEl.onchange = (e)=>{
+	const ext = e.target.value;
+	setNewExtensionOnOutputFileName(ext);
+}
+
 function getLanguageForAlignement(){
 	return selectLanguageForAlignementEl.value;
+	setNewExtensionOnOutputFileName(ext)
 }
 
 
@@ -408,9 +406,6 @@ function getOptionalPathToAeneasBinary(){
 	return global.optionalPathToAeneasBinary;
 }
 
-// global.setOptionalPathToAeneasBinary = function setOptionalPathToAeneasBinary(aeneasBinNewPath){
-// 	 optionalPathToAeneasBinary = aeneasBinNewPath;
-// }
 
 function populateAeneasSetupDivEl(html){
 	aeneasSetupDivEl.innerHTML=html;
@@ -438,5 +433,6 @@ segmentTextEl.onclick = ()=>{
 			console.log(text)
 			// disableCreateSubtitlesBtn(false);
 			setTextBoxContent(text)
+			createSubtitlesEl.disabled = false;
 		})
 }
