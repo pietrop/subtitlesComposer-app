@@ -6,12 +6,12 @@ A simple os x desktop app built in electron, using [Aeneas][aeneas] under the ho
 
 ##  Usage
 
-1. [Go to release section and download, packaged version, ready to use version](https://github.com/pietrop/subtitlesComposer-app/releases). 
+1. --> [See user manual for more details](https://autoedit.gitbook.io/subtitles-composer-app/) <--
 
+2. [Go to release section and download, packaged version, ready to use version](https://github.com/pietrop/subtitlesComposer-app/releases). 
  
-Linux users can download a [continuos build here](https://github.com/pietrop/subtitlesComposer-app/releases/tag/continuous)
+<!-- Linux users can download a [continuos build here](https://github.com/pietrop/subtitlesComposer-app/releases/tag/continuous) -->
 
-2. --> [See user manual for more details](https://pietropassarelli.gitbooks.io/subtitlecomposer-app/content/) <--
 
 ![Video + text screenshot](screenshots/video+text+.png)
 
@@ -38,10 +38,10 @@ The app uses electron, bootstrap with bootswatch paper theme, and purpously does
 For the alignement it uses the [Aeneas][aeneas] open source project, see user manual for more details on how to get setup with that locally.
 
 
-### UI to correct captions alignement 
-At present the tool does not provide a user interface to correc the alignement of the captions. But for now there are plenty of tools that can be used instead [such as this one](http://www.closedcaptioncreator.com/)
+<!-- ### UI to correct captions alignement 
+At present the tool does not provide a user interface to correc the alignement of the captions. But for now there are plenty of tools that can be used instead [such as this one](http://www.closedcaptioncreator.com/) -->
 
-## Todo 
+<!-- ## Todo 
 
 - [X] Char per line option, add to UI.
 - [X] Add head and end tail to aeneas comand from UI.
@@ -54,12 +54,14 @@ At present the tool does not provide a user interface to correc the alignement o
 - [ ] Revisit underlying `subtitlescomposer` module to support custom list of `HOMORIFICS`.
 	- [ ] provide UI to give / add/edit list.
 
-- [ ] Hypertranscript for text portion of text transcriptin (`?`)
-
+- [ ] Hypertranscript for text portion of text transcriptin (`?`) 
 
 ## Roadmap
 
-TBC
+TBC-->
+
+
+
 
 ## Issues
 Feel free to get in touch if you have any issues, thoughts, questions, or ideas.
@@ -67,8 +69,6 @@ Feel free to get in touch if you have any issues, thoughts, questions, or ideas.
 ## Active Contributors 
 
 - [Pietro](http://twitter.com/pietropassarell)
-
-
 
 
 <!-- Initial requirements gathering and specification while at textAV with Joseph Polizzotto, Gideo, Marshal, and Jane -->
