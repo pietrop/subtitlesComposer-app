@@ -21,7 +21,7 @@
   "author": "Pietro Passarelli",
   "license": "MIT",
   "devDependencies": {
-    "electron": "^1.8.8",
+    "electron": "^13.6.6",
     "electron-builder": "^19.56.2"
   },
   "build": {
